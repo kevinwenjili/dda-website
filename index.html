@@ -1,0 +1,204 @@
+<!-- npm run dev -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/yai6lkf.css">
+
+    <!-- Navbar Stylesheet and JS -->
+    <link href="src/assets/index.css" rel="stylesheet" />
+    <script defer src="src/components/Navbar.js"></script>
+
+    <!-- Default Stylesheet -->
+    <link href="src/assets/layout.css" rel="stylesheet" />
+    <link href="src/assets/navbar.css" rel="stylesheet" />
+     
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "navbar.html", true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("navbar").innerHTML = this.responseText;
+        }
+      };
+      xhr.send();
+    </script>
+    
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "footer.html", true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("footer").innerHTML = this.responseText;
+        }
+      };
+      xhr.send();
+    </script>
+
+    <title>Home | Doug Dixon & Associates</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="navbar"></div>
+    </header>
+
+    <main>
+      <div id="homeGallery" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#homeGallery"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#homeGallery"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#homeGallery"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner gallery-container">
+          <div
+            class="carousel-item active gallery-window"
+            data-bs-interval="10000"
+          >
+            <img
+              class="d-block"
+              src="src/assets/home_gallery_1.jpg"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item gallery-window">
+            <img
+              class="d-block"
+              src="src/assets/home_gallery_4.jpg"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item gallery-window">
+            <img
+              class="d-block"
+              src="src/assets/home_gallery_2.jpg"
+              alt="Third slide"
+            />
+          </div>
+          <div class="gallery-heading">
+            <span>Bridge engineering consultant</span>
+          </div>
+        </div>
+        <!-- <a
+          class="carousel-control-prev"
+          href="#homeGallery"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#homeGallery"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a> -->
+      </div>
+      <div class="body-container">
+        <div class="body-heading">
+          <span>providing professional services in:</span>
+        </div>
+      </div>
+      <div class="body-container">
+        <div class="body-content">
+          <div class="body-category">Structural Design+Analysis</div>
+          <div>Planning</div>
+          <div>Environmental Assessment</div>
+          <div>Program Management</div>
+          <div>Feasibility Study</div>
+          <div>New Design</div>
+          <div>Rehabilitation</div>
+          <div>Evaluation</div>
+          <div>Load Rating</div>
+        </div>
+        <div class="body-img-2">
+          <img src="src/assets/body_design.png" />
+        </div>
+        <div class="body-content">
+          <div class="body-category">Structural Inspection</div>
+          <div>OSIM+Enhanced OSIM</div>
+          <div>Condition Survey</div>
+          <div>Non-Destructive Testing</div>
+          <div>Underwater</div>
+          <div>Fatigue</div>
+          <div>Confined Space</div>
+        </div>
+        <div class="body-img-1">
+          <img src="src/assets/body_inspection.png" />
+        </div>
+        <div class="body-content">
+          <div class="body-category">Specialty Work</div>
+          <div>Timber Bridge Design</div>
+          <div>Moveable Bridge Design</div>
+          <div>Forensic Engineering</div>
+          <div>Structural Health Monitoring</div>
+          <div>Asset Management</div>
+          <div>Third-Party Review</div>
+        </div>
+        <div class="body-img-4">
+          <img src="src/assets/body_specialty_2.png" />
+        </div>
+        <div class="body-content">
+          <div class="body-category">Construction Support</div>
+          <div>Contract Administration</div>
+          <div>Construction Inspection</div>
+          <div>Precast Shop Review</div>
+          <div>Constructability Review</div>
+          <div>Construction Engineering</div>
+          <div>Temporary Works</div>
+          <div>Site Support</div>
+        </div>
+        <div class="body-img-3">
+          <img src="src/assets/body_construction_2.png" />
+        </div>
+      </div>
+      <div>&nbsp;</div>
+    </main>
+    <footer>
+      <div id="footer"></div>
+    </footer>
+  </body>
+</html>

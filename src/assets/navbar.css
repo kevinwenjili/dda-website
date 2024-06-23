@@ -1,0 +1,331 @@
+/* Navbar and Menu Stylesheet */
+
+/* Banner */
+#banner {
+  /* border-bottom: 2px solid #ffffff; */
+  position: fixed;
+  display: block;
+  float: left;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+}
+
+.banner-bg-transparent {
+  background-color: transparent;
+  transition: background-color 300ms ease-in;
+}
+
+.banner-bg-transparent:after {
+  content: "";
+  left: calc(var(--banner-clearance));
+  width: calc(100vw - 2 * var(--banner-clearance));
+  height: 1px;
+  background: transparent;
+  border-bottom: solid 1px #ffffff;
+  position: absolute;
+  bottom: 0px;
+  transition: all 300ms ease-in-out;
+}
+
+.banner-bg-dark {
+  background-color: #003366;
+  transition: background-color 300ms ease-in-out;
+}
+
+.banner-bg-dark:after {
+  content: "";
+  left: 0;
+  width: 100vw;
+  height: 1px;
+  border-bottom: solid 1px #ffffff;
+  position: absolute;
+  bottom: 0px;
+  transition: all 300ms ease-in-out;
+}
+
+.banner-bg-white {
+  background-color: #ffffff;
+  transition: background-color 300ms ease-in;
+}
+
+.banner-text {
+  /* outline: solid 1px black; */
+  /* margin: var(--banner-clearance) 10px 10px 0px; */
+  color: #ffffff;
+  /* font-family: "nimbus-sans", Helvetica, Arial, sans-serif; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Menu List Form */
+.banner-text ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.banner-text li a {
+  color: #ffffff;
+  margin: 0px 0px 10px calc(var(--banner-clearance) - var(--default-padding));
+  padding: 0px 5px 0px 5px;
+  width: auto;
+  text-decoration: none;
+}
+
+.banner-bg-transparent li a:hover,
+.banner-bg-transparent .menu-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.banner-bg-dark li a:hover,
+.banner-bg-dark .menu-btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Menu */
+.banner-text .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Menu Collapsed Icon */
+.banner-text .menu-icon {
+  cursor: pointer;
+  /* display: inline-block; */
+  float: right;
+  padding: 10px 10px 10px 10px;
+  margin: 38px calc(var(--banner-clearance) - 10px) 0px 0px;
+  position: relative;
+  user-select: none;
+}
+
+.banner-text .menu-icon .navicon {
+  background: #ffffff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 300ms ease-out;
+  width: 18px;
+}
+
+.banner-text .menu-icon .navicon:before,
+.banner-text .menu-icon .navicon:after {
+  background: #ffffff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 300ms ease-out;
+  width: 100%;
+}
+
+.banner-text .menu-icon .navicon:before {
+  top: 6px;
+}
+
+.banner-text .menu-icon .navicon:after {
+  top: -6px;
+}
+
+/* Menu Expanded Icon */
+.banner-text .menu-btn {
+  display: none;
+}
+
+.banner-text .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.banner-text .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.banner-text .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.banner-text .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.banner-text .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.banner-text .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* Menu Default Form */
+@media (min-width: 600px) {
+  .banner-text li {
+    float: left;
+    margin: 36px calc(var(--banner-clearance) - var(--default-padding)) 0px
+      var(--default-padding);
+  }
+  .banner-text li a {
+    display: block;
+    padding: 0px var(--default-padding) 0px var(--default-padding);
+    margin: 0;
+  }
+  .banner-text .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .banner-text .menu-icon {
+    display: none;
+  }
+}
+
+/* Logo */
+#logo {
+  display: block;
+  float: left;
+  min-width: var(--logo-size);
+  min-height: var(--logo-size);
+  max-width: 300px;
+  max-height: var(--logo-size);
+  position: relative;
+  margin: var(--banner-clearance) 10px 11px calc(var(--banner-clearance));
+}
+
+#logo:hover {
+  filter: drop-shadow(0px 0px 1px #ffffff);
+  text-decoration: none;
+}
+
+.logo-container {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-text {
+  color: #ffffff;
+  position: absolute;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90%;
+  top: 0;
+  left: 0;
+}
+
+.banner-bg-transparent .logo-text {
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.banner-bg-dark .logo-text {
+  opacity: 1;
+  transition: all 300ms linear 500ms;
+}
+
+.assemble-logo img {
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 800ms;
+}
+
+.disassemble-logo img {
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-direction: reverse;
+  animation-duration: 500ms;
+}
+
+.move-left {
+  animation-name: moveLeft, fadeIn;
+}
+
+.move-right {
+  animation-name: moveRight, fadeIn;
+}
+
+.move-up {
+  animation-name: moveUp, fadeIn;
+}
+
+.move-down {
+  animation-name: moveDown, fadeIn;
+}
+
+.move-diagonal {
+  animation-name: moveDiagonal, fadeIn;
+}
+
+.transition-in {
+  animation-name: transitionIn, fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(var(--logo-movement));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(calc(-1 * var(--logo-movement)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(var(--logo-movement));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(calc(-1 * var(--logo-movement)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveDiagonal {
+  from {
+    transform: translateY(var(--logo-movement))
+      translateX(calc(-1 * var(--logo-movement)));
+  }
+  to {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}

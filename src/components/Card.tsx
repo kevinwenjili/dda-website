@@ -10,7 +10,7 @@ interface CardProps {
 }
 
 const Card = ({
-  img = "src/assets/template.jpg",
+  img = "public/assets/template.jpg",
   altText,
   refLink = "#",
   city,

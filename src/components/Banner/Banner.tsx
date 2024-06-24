@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import "./Banner.css";
-import "./Banner-Std.css"
-import "./Banner-Alt.css"
+import "./Banner-Std.css";
+import "./Banner-Alt.css";
 
 interface BannerProps {
   bannerStyle?: "std" | "alt";
 }
 
-const Banner: React.FC<BannerProps> = ({ bannerStyle="std" }) => {
+const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = 280;
@@ -85,30 +85,30 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle="std" }) => {
   return (
     <div className={bannerStyle + "-banner"}>
       <div id="banner" className="banner-text banner-bg-transparent">
-        <a href="/" id="logo" className="assemble-logo">
+        <a href="/dda-website/" id="logo" className="assemble-logo">
           <img
             className="logo-container move-right"
-            src="src/assets/Logo/logo_frame_horizontal.png"
+            src="public/assets/Logo/logo_frame_horizontal.png"
           />
           <img
             className="logo-container move-left"
-            src="src/assets/Logo/logo_a_horizontal.png"
+            src="public/assets/Logo/logo_a_horizontal.png"
           />
           <img
             className="logo-container move-down"
-            src="src/assets/Logo/logo_d_vertical.png"
+            src="public/assets/Logo/logo_d_vertical.png"
           />
           <img
             className="logo-container move-up"
-            src="src/assets/Logo/logo_a_vertical.png"
+            src="public/assets/Logo/logo_a_vertical.png"
           />
           <img
             className="logo-container move-diagonal"
-            src="src/assets/Logo/logo_a_diagonal.png"
+            src="public/assets/Logo/logo_a_diagonal.png"
           />
           <img
             className="logo-container transition-in"
-            src="src/assets/Logo/logo_d_curve.png"
+            src="public/assets/Logo/logo_d_curve.png"
           />
           <div className="logo-text">Doug Dixon & Associates</div>
         </a>

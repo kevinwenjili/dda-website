@@ -38,21 +38,21 @@ const Home: React.FC = () => {
       >
         <img
           className="d-block"
-          src="src/assets/home_gallery_1.jpg"
+          src="public/assets/home_gallery_1.jpg"
           alt="First slide"
         />
       </div>
       <div className="carousel-item gallery-window">
         <img
           className="d-block"
-          src="src/assets/home_gallery_4.jpg"
+          src="public/assets/home_gallery_4.jpg"
           alt="Second slide"
         />
       </div>
       <div className="carousel-item gallery-window">
         <img
           className="d-block"
-          src="src/assets/home_gallery_2.jpg"
+          src="public/assets/home_gallery_2.jpg"
           alt="Third slide"
         />
       </div>
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
       <div>Load Rating</div>
     </div>
     <div className="body-img-2">
-      <img src="src/assets/body_design.png" />
+      <img src="public/assets/body_design.png" />
     </div>
     <div className="body-content">
       <div className="body-category">Structural Inspection</div>
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
       <div>Confined Space</div>
     </div>
     <div className="body-img-1">
-      <img src="src/assets/body_inspection.png" />
+      <img src="public/assets/body_inspection.png" />
     </div>
     <div className="body-content">
       <div className="body-category">Specialty Work</div>
@@ -121,7 +121,7 @@ const Home: React.FC = () => {
       <div>Third-Party Review</div>
     </div>
     <div className="body-img-4">
-      <img src="src/assets/body_specialty_2.png" />
+      <img src="public/assets/body_specialty_2.png" />
     </div>
     <div className="body-content">
       <div className="body-category">Construction Support</div>
@@ -134,7 +134,7 @@ const Home: React.FC = () => {
       <div>Site Support</div>
     </div>
     <div className="body-img-3">
-      <img src="src/assets/body_construction_2.png" />
+      <img src="public/assets/body_construction_2.png" />
     </div>
   </div>
   <div>&nbsp;</div>

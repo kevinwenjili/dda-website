@@ -1,0 +1,89 @@
+/* Banner */
+
+.std-banner .banner-bg-transparent {
+  background-color: transparent;
+}
+
+.std-banner .banner-bg-transparent:after {
+  border-bottom: solid 1px #ffffff;
+}
+
+.std-banner .banner-bg-dark {
+  background-color: #003366;
+}
+
+.std-banner .banner-bg-dark:after {
+  border-bottom: solid 1px #ffffff;
+}
+
+.std-banner .banner-text {
+  color: #ffffff;
+}
+
+.std-banner .banner-text li a {
+  color: #ffffff;
+}
+
+.std-banner .banner-bg-transparent li a:hover,
+.std-banner .banner-bg-transparent .menu-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.std-banner .banner-bg-dark li a:hover,
+.std-banner .banner-bg-dark .menu-btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.std-banner .banner-text .menu-icon .navicon {
+  background: #ffffff;
+}
+
+.std-banner .banner-text .menu-icon .navicon:before,
+.std-banner .banner-text .menu-icon .navicon:after {
+  background: #ffffff;
+}
+
+/* Menu Expanded Icon */
+
+/* Menu Default Form */
+
+/* Logo */
+
+.std-banner #banner #logo .move-left {
+  animation-name: moveLeft, fadeInStd;
+}
+
+.std-banner #banner #logo .move-right {
+  animation-name: moveRight, fadeInStd;
+}
+
+.std-banner #banner #logo .move-up {
+  animation-name: moveUp, fadeInStd;
+}
+
+.std-banner #banner #logo .move-down {
+  animation-name: moveDown, fadeInStd;
+}
+
+.std-banner #banner #logo .move-diagonal {
+  animation-name: moveDiagonal, fadeInStd;
+}
+
+.std-banner #banner #logo .transition-in {
+  animation-name: transitionIn, fadeInStd;
+}
+
+.std-banner #banner #logo .logo-container {
+  filter: invert(0);
+}
+
+@keyframes fadeInStd {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

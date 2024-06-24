@@ -1,4 +1,9 @@
-/* Navbar and Menu Stylesheet */
+/* Navbar and Menu Stylesheet - Dark*/
+
+:root {
+  --logo-size: 60px;
+  --logo-movement: 30%;
+}
 
 /* Banner */
 #banner {
@@ -13,7 +18,6 @@
 }
 
 .banner-bg-transparent {
-  background-color: transparent;
   transition: background-color 300ms ease-in;
 }
 
@@ -23,14 +27,12 @@
   width: calc(100vw - 2 * var(--banner-clearance));
   height: 1px;
   background: transparent;
-  border-bottom: solid 1px #ffffff;
   position: absolute;
   bottom: 0px;
   transition: all 300ms ease-in-out;
 }
 
 .banner-bg-dark {
-  background-color: #003366;
   transition: background-color 300ms ease-in-out;
 }
 
@@ -39,7 +41,6 @@
   left: 0;
   width: 100vw;
   height: 1px;
-  border-bottom: solid 1px #ffffff;
   position: absolute;
   bottom: 0px;
   transition: all 300ms ease-in-out;
@@ -50,43 +51,30 @@
   transition: background-color 300ms ease-in;
 }
 
-.banner-text {
-  /* outline: solid 1px black; */
-  /* margin: var(--banner-clearance) 10px 10px 0px; */
-  color: #ffffff;
-  /* font-family: "nimbus-sans", Helvetica, Arial, sans-serif; */
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-}
-
 /* Menu List Form */
 .banner-text ul {
   margin: 0;
+  margin-bottom: 5px;
   padding: 0;
   list-style: none;
   overflow: hidden;
   background-color: transparent;
 }
 
+.banner-text {
+  /* outline: solid 1px black; */
+  /* margin: var(--banner-clearance) 10px 10px 0px; */
+  /* font-family: "nimbus-sans", Helvetica, Arial, sans-serif; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+
 .banner-text li a {
-  color: #ffffff;
   margin: 0px 0px 10px calc(var(--banner-clearance) - var(--default-padding));
   padding: 0px 5px 0px 5px;
   width: auto;
   text-decoration: none;
-}
-
-.banner-bg-transparent li a:hover,
-.banner-bg-transparent .menu-btn:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.banner-bg-dark li a:hover,
-.banner-bg-dark .menu-btn:hover {
-  color: #000000;
-  background-color: #ffffff;
 }
 
 /* Menu */
@@ -108,7 +96,7 @@
 }
 
 .banner-text .menu-icon .navicon {
-  background: #ffffff;
+  background: #000000;
   display: block;
   height: 2px;
   position: relative;
@@ -118,7 +106,6 @@
 
 .banner-text .menu-icon .navicon:before,
 .banner-text .menu-icon .navicon:after {
-  background: #ffffff;
   content: "";
   display: block;
   height: 100%;
@@ -242,38 +229,6 @@
   animation-duration: 500ms;
 }
 
-.move-left {
-  animation-name: moveLeft, fadeIn;
-}
-
-.move-right {
-  animation-name: moveRight, fadeIn;
-}
-
-.move-up {
-  animation-name: moveUp, fadeIn;
-}
-
-.move-down {
-  animation-name: moveDown, fadeIn;
-}
-
-.move-diagonal {
-  animation-name: moveDiagonal, fadeIn;
-}
-
-.transition-in {
-  animation-name: transitionIn, fadeIn;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 @keyframes moveLeft {
   from {

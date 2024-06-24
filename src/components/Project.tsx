@@ -4,7 +4,7 @@ interface Props {
     result: ReactNode;
 }
 
-const Projects = ({ result }:Props) => {
+const Project = ({ result }:Props) => {
     return (
       <>
         <section className="card-container">{result}</section>
@@ -12,4 +12,4 @@ const Projects = ({ result }:Props) => {
     );
   };
   
-  export default Projects;
+  export default Project;

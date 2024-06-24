@@ -1,0 +1,107 @@
+/* Banner */
+
+.alt-banner .banner-bg-transparent {
+  background-color: #ffffff;
+}
+
+.alt-banner .banner-bg-transparent:after {
+  border-bottom: solid 1px #000000;
+}
+
+.alt-banner .banner-bg-dark {
+  background-color: #003366;
+}
+
+.alt-banner .banner-bg-dark:after {
+  border-bottom: solid 1px #003366;
+}
+
+.alt-banner .banner-text {
+  color: #000000;
+}
+
+.alt-banner .banner-text li a {
+  color: #000000;
+}
+
+.alt-banner .banner-bg-transparent li a:hover,
+.alt-banner .banner-bg-transparent .menu-btn:hover {
+  color: #ffffff;
+  background-color: #003366;
+}
+
+.alt-banner .banner-bg-dark li a,
+.alt-banner .banner-bg-dark .menu-btn {
+  color: #ffffff;
+}
+
+.alt-banner .banner-bg-dark li a:hover,
+.alt-banner .banner-bg-dark .menu-btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+
+.alt-banner .banner-text .menu-icon .navicon {
+  background: #000000;
+}
+
+.alt-banner .banner-text .menu-icon .navicon:before,
+.alt-banner .banner-text .menu-icon .navicon:after {
+  background: #000000;
+}
+
+.alt-banner .banner-bg-dark > .menu-icon > .navicon {
+  background: #ffffff;
+}
+
+.alt-banner .banner-bg-dark > .menu-icon > .navicon:before,
+.alt-banner .banner-bg-dark > .menu-icon > .navicon:after {
+  background: #ffffff;
+}
+
+
+/* Menu Expanded Icon */
+
+/* Menu Default Form */
+
+/* Logo */
+
+.alt-banner #banner #logo .move-left {
+  animation-name: moveLeft, fadeInAlt;
+}
+
+.alt-banner #banner #logo .move-right {
+  animation-name: moveRight, fadeInAlt;
+}
+
+.alt-banner #banner #logo .move-up {
+  animation-name: moveUp, fadeInAlt;
+}
+
+.alt-banner #banner #logo .move-down {
+  animation-name: moveDown, fadeInAlt;
+}
+
+.alt-banner #banner #logo .move-diagonal {
+  animation-name: moveDiagonal, fadeInAlt;
+}
+
+.alt-banner #banner #logo .transition-in {
+  animation-name: transitionIn, fadeInAlt;
+}
+
+.alt-banner #banner #logo .logo-container {
+  filter: invert(1);
+}
+
+@keyframes fadeInAlt {
+  from {
+    opacity: 0;
+    filter: invert(0);
+  }
+  to {
+    opacity: 1;
+    filter: invert(1);
+  }
+}

@@ -21,8 +21,6 @@ body {
 :root {
   --banner-clearance: 20px;
   --default-padding: 5px;
-  --logo-size: 60px;
-  --logo-movement: 30%;
   --gallery-height: 720px;
   --heading-text: 45px;
 }

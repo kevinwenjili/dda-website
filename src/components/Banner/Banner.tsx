@@ -88,27 +88,27 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
         <a href="/dda-website/" id="logo" className="assemble-logo">
           <img
             className="logo-container move-right"
-            src="public/assets/Logo/logo_frame_horizontal.png"
+            src="/public/assets/Logo/logo_frame_horizontal.png"
           />
           <img
             className="logo-container move-left"
-            src="public/assets/Logo/logo_a_horizontal.png"
+            src="/public/assets/Logo/logo_a_horizontal.png"
           />
           <img
             className="logo-container move-down"
-            src="public/assets/Logo/logo_d_vertical.png"
+            src="./public/assets/Logo/logo_d_vertical.png"
           />
           <img
             className="logo-container move-up"
-            src="public/assets/Logo/logo_a_vertical.png"
+            src="/public/assets/Logo/logo_a_vertical.png"
           />
           <img
             className="logo-container move-diagonal"
-            src="public/assets/Logo/logo_a_diagonal.png"
+            src="/public/assets/Logo/logo_a_diagonal.png"
           />
           <img
             className="logo-container transition-in"
-            src="public/assets/Logo/logo_d_curve.png"
+            src="/public/assets/Logo/logo_d_curve.png"
           />
           <div className="logo-text">Doug Dixon & Associates</div>
         </a>

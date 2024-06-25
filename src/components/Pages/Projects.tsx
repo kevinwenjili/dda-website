@@ -6,7 +6,7 @@ import Filter from "../Filter";
 import Search from "../Search";
 import Project from "../Project";
 import Banner from "../Banner/Banner";
-import projectLists from "../../db/projectList";
+import projectLists from "../../../public/db/projectList";
 import "../ProjectCard.css";
 
 function Projects() {
@@ -80,7 +80,7 @@ function Projects() {
   return (
     <>
       <div className="navbar-spacer">&nbsp;</div>
-      <Banner bannerStyle="alt"/>
+      <Banner bannerStyle="alt" />
       <Search query={query} handleInputChange={handleInputChange}>
         Search by Project
       </Search>

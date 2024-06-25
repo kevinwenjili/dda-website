@@ -38,7 +38,7 @@ const Home: React.FC = () => {
       >
         <img
           className="d-block"
-          src="public/assets/home_gallery_1.jpg"
+          src="/public/assets/home_gallery_1.jpg"
           alt="First slide"
         />
       </div>

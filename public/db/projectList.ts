@@ -1,6 +1,6 @@
 const projectLists = [
   {
-    img: "./assets/home_gallery_1.jpg",
+    img: "assets/home-images/home_gallery_1.jpg",
     refLink: "#",
     projectTitle: "Design Project #1",
     city: "Toronto",
@@ -8,7 +8,7 @@ const projectLists = [
     projectType: "design",
   },
   {
-    img: "./assets/home_gallery_2.jpg",
+    img: "assets/home-images/home_gallery_2.jpg",
     refLink: "#",
     projectTitle: "Construction Project #1",
     city: "Toronto",
@@ -16,7 +16,7 @@ const projectLists = [
     projectType: "construction",
   },
   {
-    img: "./assets/home_gallery_3.jpg",
+    img: "assets/home-images/home_gallery_3.jpg",
     refLink: "#",
     projectTitle: "Inspection Project #1",
     city: "Waterloo",
@@ -24,7 +24,7 @@ const projectLists = [
     projectType: "inspection",
   },
   {
-    img: "./assets/home_gallery_4.jpg",
+    img: "assets/home-images/home_gallery_4.jpg",
     refLink: "#",
     projectTitle: "Inspection Project #2",
     city: "Ottawa",

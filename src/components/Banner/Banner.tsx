@@ -85,30 +85,30 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
   return (
     <div className={bannerStyle + "-banner"}>
       <div id="banner" className="banner-text banner-bg-transparent">
-        <a href="/dda-website/" id="logo" className="assemble-logo">
+        <a href="#/" id="logo" className="assemble-logo">
           <img
             className="logo-container move-right"
-            src="/public/assets/Logo/logo_frame_horizontal.png"
+            src="assets/logo/logo_frame_horizontal.png"
           />
           <img
             className="logo-container move-left"
-            src="/public/assets/Logo/logo_a_horizontal.png"
+            src="assets/logo/logo_a_horizontal.png"
           />
           <img
             className="logo-container move-down"
-            src="./public/assets/Logo/logo_d_vertical.png"
+            src="assets/logo/logo_d_vertical.png"
           />
           <img
             className="logo-container move-up"
-            src="/public/assets/Logo/logo_a_vertical.png"
+            src="assets/logo/logo_a_vertical.png"
           />
           <img
             className="logo-container move-diagonal"
-            src="/public/assets/Logo/logo_a_diagonal.png"
+            src="assets/logo/logo_a_diagonal.png"
           />
           <img
             className="logo-container transition-in"
-            src="/public/assets/Logo/logo_d_curve.png"
+            src="assets/logo/logo_d_curve.png"
           />
           <div className="logo-text">Doug Dixon & Associates</div>
         </a>
@@ -119,7 +119,7 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
         </label>
         <ul className="menu">
           <li>
-            <a href="projects">Projects</a>
+            <a href="#/projects">Projects</a>
           </li>
           <li>
             <a href="#about">About</a>

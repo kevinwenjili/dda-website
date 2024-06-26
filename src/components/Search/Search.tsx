@@ -1,4 +1,4 @@
-import "./Search.css";
+import "./ProjectSearch.css";
 
 interface SearchProps {
   children?: string;

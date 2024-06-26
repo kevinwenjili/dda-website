@@ -1,5 +1,5 @@
 import FilterByServices from "./FilterByServices";
-import "./Filter.css";
+import "./ProjectFilter.css";
 
 interface Props {
     handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;

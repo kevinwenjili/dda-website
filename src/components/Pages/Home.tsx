@@ -45,14 +45,14 @@ const Home: React.FC = () => {
           <div className="carousel-item gallery-window">
             <img
               className="d-block"
-              src="assets/home-images/home_gallery_4.jpg"
+              src="assets/home-images/home_gallery_6.jpg"
               alt="Second slide"
             />
           </div>
           <div className="carousel-item gallery-window">
             <img
               className="d-block"
-              src="assets/home-images/home_gallery_2.jpg"
+              src="assets/home-images/home_gallery_3.jpg"
               alt="Third slide"
             />
           </div>

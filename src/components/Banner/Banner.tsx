@@ -125,10 +125,10 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#careers">Careers</a>
+            <a href="#team">Team</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#careers">Careers</a>
           </li>
         </ul>
       </div>

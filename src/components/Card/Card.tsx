@@ -4,6 +4,7 @@ interface CardProps {
   refLink?: string;
   city?: string;
   province?: string;
+  client?: string;
   children?: string;
   projectTitle?: string;
   projectType?: string;
@@ -15,16 +16,18 @@ const Card = ({
   refLink = "#",
   city,
   province,
+  client,
   projectTitle,
   projectType,
 }: CardProps) => {
   return (
     <div className="card" style={{ width: "auto" }}>
       <a href={refLink}>
-      <img src={img} className="card-img-top" alt={altText} />
+        <img src={img} className="card-img-top" alt={altText} />
         <div className="card-body">
           <p className="card-title">{projectTitle}</p>
-          <p className="card-text">
+          <p className="card-text-client">{client}</p>
+          <p className="card-text-location">
             {city}, {province}
           </p>
         </div>

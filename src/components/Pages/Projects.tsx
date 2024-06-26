@@ -19,11 +19,19 @@ function Projects() {
     setQuery(event.target.value);
   };
 
-  const filteredItems = projectLists.filter(
-    (projectLists) =>
-      projectLists.projectTitle.toLowerCase().indexOf(query.toLowerCase()) !==
-      -1
-  );
+  const filteredItems = projectLists.filter((projectLists) => {
+    // projectLists.projectTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    const projectTitleMatch = projectLists.projectTitle
+      .toLowerCase()
+      .includes(query.toLowerCase());
+    const cityMatch = projectLists.city
+      .toLowerCase()
+      .includes(query.toLowerCase());
+    const clientMatch = projectLists.client
+      .toLowerCase()
+      .includes(query.toLowerCase());
+    return projectTitleMatch || cityMatch || clientMatch;
+  });
 
   // Radio Filtering
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,6 +46,7 @@ function Projects() {
       projectTitle: string;
       city: string;
       province: string;
+      client: string;
       projectType: string;
     }[],
     selected: string | null,
@@ -61,7 +70,7 @@ function Projects() {
     }
 
     return filteredProjects.map(
-      ({ img, refLink, projectTitle, city, province, projectType }) => (
+      ({ img, refLink, projectTitle, city, province, client, projectType }) => (
         <Card
           key={Math.random()}
           img={img}
@@ -69,6 +78,7 @@ function Projects() {
           projectTitle={projectTitle}
           city={city}
           province={province}
+          client={client}
           projectType={projectType}
         />
       )

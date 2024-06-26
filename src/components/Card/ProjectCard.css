@@ -26,17 +26,27 @@ div.card-body {
 
 p.card-title {
   font-size: 18px;
+  line-height: 120%;
+  height: 40px;
   color: #000000;
   margin: 0;
   padding: 0;
 }
 
-p.card-text {
+p.card-text-client {
   font-size: 14px;
-  font-style: italic;
+  color: #9f9f9f;
+  margin: 0;
+  padding-top: 5px;
+  line-height: 110%;
+}
+
+p.card-text-location {
+  font-size: 14px;
   color: #515151;
   margin: 0;
   padding: 0;
+  line-height: 110%;
 }
 
 .card-container {

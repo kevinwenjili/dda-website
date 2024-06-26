@@ -8,8 +8,8 @@ div.card,
   margin: 5px;
 }
 
-.card:hover {
-  border-bottom-color: #000000;
+.card:hover .card-body .card-title {
+  text-decoration: underline;
 }
 
 .card img {

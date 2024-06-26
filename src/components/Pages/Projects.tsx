@@ -1,18 +1,18 @@
 import { useState } from "react";
 import React from "react";
 
-import Card from "../Card";
+import Card from "../Card/Card";
 import Filter from "../Filter";
-import Search from "../Search";
-import Project from "../Project";
+import Search from "../Search/Search";
+import Project from "../Card/Project";
 import Banner from "../Banner/Banner";
 import projectLists from "../../../public/db/projectList";
-import "../ProjectCard.css";
+import "../Card/ProjectCard.css";
 
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // Search Filtger
+  // Search Filter
   const [query, setQuery] = useState("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {

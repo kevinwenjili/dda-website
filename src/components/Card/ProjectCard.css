@@ -1,6 +1,7 @@
 div.card,
 .card img {
   border-radius: 0px;
+  border: 0px;
   border-color: transparent;
 }
 
@@ -25,12 +26,13 @@ div.card-body {
 }
 
 p.card-title {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 120%;
   height: 40px;
   color: #000000;
   margin: 0;
   padding: 0;
+  font-weight: 400;
 }
 
 p.card-text-client {

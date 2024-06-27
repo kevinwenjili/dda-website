@@ -89,10 +89,11 @@ function Projects() {
 
   return (
     <>
+      <title>Projects | DDA</title>
       <div className="navbar-spacer">&nbsp;</div>
       <Banner bannerStyle="alt" />
       <Search query={query} handleInputChange={handleInputChange}>
-        Search by Project
+        Search Projects
       </Search>
       <Filter handleChange={handleChange} />
       <Project result={result} />

@@ -9,12 +9,12 @@ const FilterByServices = ({ handleChange }: Props) => {
 
   return (
     <>
-      <div className="filter-title">Project Type:</div>
+      <div className="filter-title">Featured Projects:</div>
       <div className="filter-options">
         <label className="filter-label-container">
           <input onChange={handleChange} type="radio" value="" name="test"/>
           <span className="filter-check"></span>
-          <span>All Projects</span>
+          <span>All</span>
         </label>
         {services.map((service, index) => (
           <Input

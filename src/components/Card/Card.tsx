@@ -28,7 +28,7 @@ const Card = ({
           <p className="card-title">{projectTitle}</p>
           <p className="card-text-client">{client}</p>
           <p className="card-text-location">
-            {city}, {province}
+            {city !== "" ? `${city}, ${province}` : `${province}`}
           </p>
         </div>
       </a>

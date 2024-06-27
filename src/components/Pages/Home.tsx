@@ -3,10 +3,12 @@ import React from "react";
 
 import Banner from "../Banner/Banner";
 import "../Banner/Banner-Std.css";
+import "../../assets/home.css";
 
 const Home: React.FC = () => {
   return (
     <>
+      <title>Home | DDA</title>
       <Banner bannerStyle="std" />
       <div id="homeGallery" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
@@ -57,7 +59,7 @@ const Home: React.FC = () => {
             />
           </div>
           <div className="gallery-heading">
-            <span>Bridge engineering consultant</span>
+            <span>Bridge engineering consulant</span>
           </div>
         </div>
         {/* <a
@@ -81,14 +83,13 @@ const Home: React.FC = () => {
       </div>
       <div className="body-container">
         <div className="body-heading">
-          <span>providing professional services in:</span>
+          <span>delivering expertise in:</span>
         </div>
       </div>
       <div className="body-container">
         <div className="body-content">
           <div className="body-category">Structural Design+Analysis</div>
-          <div>Planning</div>
-          <div>Environmental Assessment</div>
+          <div>Planning+EA</div>
           <div>Program Management</div>
           <div>Feasibility Study</div>
           <div>New Design</div>

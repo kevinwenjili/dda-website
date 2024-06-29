@@ -1,12 +1,14 @@
 /* Default Layout Styles Sheet */
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
 
 html {
   display: table;
   margin: auto;
   background-color: #ffffff !important;
-  font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-style: normal;
 }
 
 body {
@@ -21,13 +23,21 @@ body {
 :root {
   --banner-clearance: 20px;
   --default-padding: 5px;
-  --gallery-height: 720px;
+  --gallery-height: 660px;
   --heading-text: 45px;
 }
 
 /* Navbar Spacer */
 .navbar-spacer {
   padding: 40px;
+}
+
+/* Page Titles */
+.page-title {
+  padding: 20px var(--banner-clearance) 0px var(--banner-clearance);
+  font-size: 36px;
+  font-weight: 400;
+  width: 100vw;
 }
 
 /* Footer */

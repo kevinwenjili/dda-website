@@ -1,18 +1,22 @@
 /* Banner */
 
-.std-banner .banner-bg-transparent {
+.std-banner .banner-bg-transparent,
+.std-banner .banner-transition-transparent {
   background-color: transparent;
 }
 
-.std-banner .banner-bg-transparent:after {
+.std-banner .banner-bg-transparent:after,
+.std-banner .banner-transition-transparent:after {
   border-bottom: solid 1px #ffffff;
 }
 
-.std-banner .banner-bg-dark {
+.std-banner .banner-bg-dark,
+.std-banner .banner-transition-dark {
   background-color: #003366;
 }
 
-.std-banner .banner-bg-dark:after {
+.std-banner .banner-bg-dark:after,
+.std-banner .banner-transition-dark:after {
   border-bottom: solid 1px #ffffff;
 }
 

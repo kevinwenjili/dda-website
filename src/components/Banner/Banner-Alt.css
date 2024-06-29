@@ -1,18 +1,22 @@
 /* Banner */
 
-.alt-banner .banner-bg-transparent {
+.alt-banner .banner-bg-transparent,
+.alt-banner .banner-transition-transparent {
   background-color: #ffffff;
 }
 
-.alt-banner .banner-bg-transparent:after {
+.alt-banner .banner-bg-transparent:after,
+.alt-banner .banner-transition-transparent:after {
   border-bottom: solid 1px #000000;
 }
 
-.alt-banner .banner-bg-dark {
+.alt-banner .banner-bg-dark,
+.alt-banner .banner-transition-dark {
   background-color: #003366;
 }
 
-.alt-banner .banner-bg-dark:after {
+.alt-banner .banner-bg-dark:after,
+.alt-banner .banner-transition-dark:after {
   border-bottom: solid 1px #003366;
 }
 
@@ -41,7 +45,6 @@
   background-color: #ffffff;
 }
 
-
 .alt-banner .banner-text .menu-icon .navicon {
   background: #000000;
 }
@@ -59,7 +62,6 @@
 .alt-banner .banner-bg-dark > .menu-icon > .navicon:after {
   background: #ffffff;
 }
-
 
 /* Menu Expanded Icon */
 

@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollReset from "./components/ScrollReset";
 import Home from "./components/Pages/Home";
 import Projects from "./components/Pages/Projects";
+import About from "./components/Pages/About"
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
         </Routes>
     </Router>
   );

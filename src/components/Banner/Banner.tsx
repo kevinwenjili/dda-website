@@ -30,29 +30,36 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
         bannerElement?.classList.contains("banner-bg-transparent")
       ) {
         bannerElement.classList.remove("banner-bg-transparent");
-        bannerElement.classList.add("banner-bg-dark");
+        bannerElement.classList.add("banner-transition-dark");
+        setTimeout(() => {
+          bannerElement.classList.remove("banner-transition-dark");
+          bannerElement.classList.add("banner-bg-dark");
+        }, 300);
       } else if (
         y < scrollPos &&
         bannerElement?.classList.contains("banner-bg-dark")
       ) {
         bannerElement.classList.remove("banner-bg-dark");
-        bannerElement.classList.add("banner-bg-transparent");
+        bannerElement.classList.add("banner-transition-transparent");
+        setTimeout(() => {
+          bannerElement.classList.remove("banner-transition-transparent");
+          bannerElement.classList.add("banner-bg-transparent");
+        }, 300);
       }
 
       if (y >= scrollPos && logoElement?.classList.contains("assemble-logo")) {
-        console.log("Test1");
-        logoElement.classList.remove("assemble-logo");
-        logoComponents.forEach((element) => {
-          animations.forEach((animation) => {
-            if (element.classList.contains(animation)) {
-              element.classList.remove(animation);
-              // Trigger reflow to restart animation
-              element.offsetWidth; // This line will trigger a reflow
-              element.classList.add(animation);
-            }
+        setTimeout(() => {        logoElement.classList.remove("assemble-logo");
+          logoComponents.forEach((element) => {
+            animations.forEach((animation) => {
+              if (element.classList.contains(animation)) {
+                element.classList.remove(animation);
+                // Trigger reflow to restart animation
+                element.offsetWidth; // This line will trigger a reflow
+                element.classList.add(animation);
+              }
+            });
           });
-        });
-        logoElement.classList.add("disassemble-logo");
+          logoElement.classList.add("disassemble-logo");}, 0);
       } else if (
         y < scrollPos &&
         logoElement?.classList.contains("disassemble-logo")
@@ -125,10 +132,10 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#careers">Careers</a>
+            <a href="#team">Team</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#careers">Careers</a>
           </li>
         </ul>
       </div>

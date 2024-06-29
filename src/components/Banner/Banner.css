@@ -17,11 +17,13 @@
   width: 100vw;
 }
 
-.banner-bg-transparent {
+.banner-bg-transparent,
+.banner-transition-transparent {
   transition: background-color 300ms ease-in;
 }
 
-.banner-bg-transparent:after {
+.banner-bg-transparent:after,
+.banner-transition-transparent:after {
   content: "";
   left: calc(var(--banner-clearance));
   width: calc(100vw - 2 * var(--banner-clearance));
@@ -29,20 +31,28 @@
   background: transparent;
   position: absolute;
   bottom: 0px;
+}
+
+.banner-transition-transparent:after {
   transition: all 300ms ease-in-out;
 }
 
-.banner-bg-dark {
+.banner-bg-dark,
+.banner-transition-dark {
   transition: background-color 300ms ease-in-out;
 }
 
-.banner-bg-dark:after {
+.banner-bg-dark:after,
+.banner-transition-dark:after {
   content: "";
   left: 0;
   width: 100vw;
   height: 1px;
   position: absolute;
   bottom: 0px;
+}
+
+.banner-transition-dark:after {
   transition: all 300ms ease-in-out;
 }
 
@@ -54,7 +64,6 @@
 /* Menu List Form */
 .banner-text ul {
   margin: 0;
-  margin-bottom: 5px;
   padding: 0;
   list-style: none;
   overflow: hidden;
@@ -81,7 +90,7 @@
 .banner-text .menu {
   clear: both;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 300ms ease-out;
 }
 
 /* Menu Collapsed Icon */
@@ -127,8 +136,14 @@
   display: none;
 }
 
+.banner-text .menu-btn ~ .menu {
+  transition: all 300ms ease-in-out;
+}
+
 .banner-text .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 280px;
+  margin-bottom: 5px;
+  transition: all 300ms;
 }
 
 .banner-text .menu-btn:checked ~ .menu-icon .navicon {
@@ -206,19 +221,21 @@
   left: 0;
 }
 
-.banner-bg-transparent .logo-text {
+.banner-bg-transparent .logo-text,
+.banner-transition-transparent .logo-text {
   opacity: 0;
   transition: all 300ms;
 }
 
-.banner-bg-dark .logo-text {
+.banner-bg-dark .logo-text,
+.banner-transition-dark .logo-text {
   opacity: 1;
   transition: all 300ms linear 500ms;
 }
 
 .assemble-logo img {
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out;
   animation-duration: 800ms;
 }
 
@@ -226,9 +243,8 @@
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   animation-direction: reverse;
-  animation-duration: 500ms;
+  animation-duration: 400ms;
 }
-
 
 @keyframes moveLeft {
   from {

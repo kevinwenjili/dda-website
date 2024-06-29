@@ -8,6 +8,7 @@ import Project from "../Card/Project";
 import Banner from "../Banner/Banner";
 import projectLists from "../../../public/db/projectList";
 import "../Card/ProjectCard.css";
+import "../Search/ProjectSearch.css"
 
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -91,9 +92,10 @@ function Projects() {
     <>
       <title>Projects | DDA</title>
       <div className="navbar-spacer">&nbsp;</div>
+      <div className="page-title">Projects</div>
       <Banner bannerStyle="alt" />
       <Search query={query} handleInputChange={handleInputChange}>
-        Search Projects
+        Search
       </Search>
       <Filter handleChange={handleChange} />
       <Project result={result} />

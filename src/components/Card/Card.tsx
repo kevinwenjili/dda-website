@@ -25,11 +25,13 @@ const Card = ({
       <a href={refLink}>
         <img src={img} className="card-img-top" alt={altText} />
         <div className="card-body">
-          <p className="card-title">{projectTitle}</p>
-          <p className="card-text-client">{client}</p>
-          <p className="card-text-location">
-            {city !== "" ? `${city}, ${province}` : `${province}`}
-          </p>
+          <div className="card-title">{projectTitle}</div>
+          <div className="card-info">
+            <p className="card-text-client">{client}</p>
+            <p className="card-text-location">
+              {city !== "" ? `${city}, ${province}` : `${province}`}
+            </p>
+          </div>
         </div>
       </a>
     </div>

@@ -30,7 +30,7 @@ const projectLists = [
   {
     img: "db/images/third-street-bridge-replacement.jpg",
     refLink: "#",
-    projectTitle: "Third Street Bridge Deck Replacement and Substructure Rehabilitation",
+    projectTitle: "Third Street Bridge Rehabilitation",
     city: "Chatham-Kent",
     province: "Ontario",
     client: "Municipality of Chatham-Kent",

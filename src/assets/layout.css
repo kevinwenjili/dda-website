@@ -9,6 +9,7 @@ html {
   display: table;
   margin: auto;
   width: 100vw;
+  min-width: 380px;
   background-color: #ffffff !important;
 }
 
@@ -17,7 +18,7 @@ body {
   vertical-align: middle;
   /* max-width: 1024px; */
   background-color: transparent !important;
-  min-width: 320px;
+  min-width: 380px;
 }
 
 div.page-container {
@@ -49,5 +50,3 @@ div.page-container {
   font-weight: 400;
   width: 100vw;
 }
-
-

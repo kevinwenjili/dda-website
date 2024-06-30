@@ -27,8 +27,10 @@ const Footer = ({ children }: Props) => {
             <div>+1-647-405-0523</div>
             <div className="footer-category">Address</div>
             <div>
-              <div>2 County Court Boulevard, Suite 345</div>
-              <div>Brampton, Ontario, Canada, L6W 3W8</div>
+              <div>2 County Court Boulevard</div>
+              <div>Suite 345</div>
+              <div>Brampton, Ontario</div>
+              <div>Canada, L6W 3W8</div>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@
 html {
   display: table;
   margin: auto;
+  width: 100vw;
   background-color: #ffffff !important;
 }
 
@@ -15,8 +16,16 @@ body {
   display: table-cell;
   vertical-align: middle;
   /* max-width: 1024px; */
-  background-color: #ffffff !important;
+  background-color: transparent !important;
   min-width: 320px;
+}
+
+div.page-container {
+  background-color: #ffffff !important;
+  width: 100vw;
+  z-index: 3 !important;
+  padding: 0 0 var(--banner-clearance) 0;
+  /* box-shadow: 0px -10px 30px; */
 }
 
 /* Variables */
@@ -25,31 +34,20 @@ body {
   --default-padding: 5px;
   --gallery-height: 660px;
   --heading-text: 45px;
+  --footer-height: 100px;
 }
 
-/* Navbar Spacer */
+/* Spacers */
 .navbar-spacer {
   padding: 40px;
 }
 
 /* Page Titles */
 .page-title {
-  padding: 20px var(--banner-clearance) 0px var(--banner-clearance);
+  padding: 20px var(--banner-clearance) 0px calc(var(--banner-clearance) - 3px);
   font-size: 36px;
   font-weight: 400;
   width: 100vw;
 }
 
-/* Footer */
-.footer-container {
-  padding: 30px var(--banner-clearance) 10px var(--banner-clearance);
-  border-top: solid 1px black;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #003366;
-}
 
-.footer-container > * > * > a {
-  color: #cfc7e7;
-  text-decoration: none;
-}

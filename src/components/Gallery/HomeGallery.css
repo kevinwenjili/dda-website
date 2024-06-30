@@ -55,10 +55,10 @@
     height: 4px;
     margin: 0px;
     background-color: #ffffff;
-    opacity: 0.9;
+    opacity: 1;
   }
   
   .carousel .carousel-indicators button.active {
-    background-color: #ff0000;
-    opacity: 0.9;
+    background-color: #ee6352;
+    opacity: 1;
   }

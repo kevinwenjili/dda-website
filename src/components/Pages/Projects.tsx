@@ -6,9 +6,10 @@ import Filter from "../Filter";
 import Search from "../Search/Search";
 import Project from "../Card/Project";
 import Banner from "../Banner/Banner";
+import Footer from "../Footer/Footer";
 import projectLists from "../../../public/db/projectList";
 import "../Card/ProjectCard.css";
-import "../Search/ProjectSearch.css"
+import "../Search/ProjectSearch.css";
 
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -91,14 +92,18 @@ function Projects() {
   return (
     <>
       <title>Projects | DDA</title>
-      <div className="navbar-spacer">&nbsp;</div>
-      <div className="page-title">Projects</div>
       <Banner bannerStyle="alt" />
-      <Search query={query} handleInputChange={handleInputChange}>
-        Search
-      </Search>
-      <Filter handleChange={handleChange} />
-      <Project result={result} />
+      <div className="page-container">
+        <div className="navbar-spacer">&nbsp;</div>
+        <div className="page-title">Projects</div>
+        <Search query={query} handleInputChange={handleInputChange}>
+          Search
+        </Search>
+        <Filter handleChange={handleChange} />
+        <Project result={result} />
+      </div>
+      <div className="footer-spacer">&nbsp;</div>
+      <Footer />
     </>
   );
 }

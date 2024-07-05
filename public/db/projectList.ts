@@ -1,8 +1,7 @@
 const projectLists = [
-
   {
     img: "db/images/eastern-ave-fatigue-evaluation.jpg",
-    refLink: "#",
+    refLink: "#team",
     projectTitle: "Eastern Avenue Interchange Fatigue Evaluation",
     city: "Toronto",
     province: "Ontario",
@@ -11,7 +10,7 @@ const projectLists = [
   },
   {
     img: "db/images/ship-channel-rehabilitation.jpg",
-    refLink: "#",
+    refLink: "#team",
     projectTitle: "Cherry Street Bascule Bridge Rehabilitation - Phase I",
     city: "Toronto",
     province: "Ontario",
@@ -20,7 +19,7 @@ const projectLists = [
   },
   {
     img: "db/images/dvp-coating-rehabilitation.jpg",
-    refLink: "#",
+    refLink: "#team",
     projectTitle: "Don Valley Parkway Steel Bridges Coating Rehabilitation",
     city: "Toronto",
     province: "Ontario",
@@ -29,7 +28,7 @@ const projectLists = [
   },
   {
     img: "db/images/third-street-bridge-replacement.jpg",
-    refLink: "#",
+    refLink: "#team",
     projectTitle: "Third Street Bridge Rehabilitation",
     city: "Chatham-Kent",
     province: "Ontario",
@@ -38,7 +37,7 @@ const projectLists = [
   },
   {
     img: "db/images/various-culvert-rehabilitation.jpg",
-    refLink: "#",
+    refLink: "#team",
     projectTitle: "City of Toronto Culverts Rehabilitation and Replacement",
     city: "Toronto",
     province: "Ontario",
@@ -47,7 +46,7 @@ const projectLists = [
   },
   {
     img: "db/images/osim-inspection.jpg",
-    refLink: "#",
+    refLink: "#team",
     projectTitle: "City of Toronto Biennial OSIM Inspection Program",
     city: "Toronto",
     province: "Ontario",
@@ -56,7 +55,7 @@ const projectLists = [
   },
   {
     img: "db/images/fgge-hammer-sounding.jpg",
-    refLink: "#",
+    refLink: "#team",
     projectTitle: "Gardiner Expressway Soffit and Substructure Delamination Inspection",
     city: "Toronto",
     province: "Ontario",
@@ -65,7 +64,7 @@ const projectLists = [
   },
   {
     img: "db/images/nwr-underwater-inspection.jpg",
-    refLink: "#",
+    refLink: "#team",
     projectTitle: "MTO Northwest Region Bridges and Culverts Underwater Inspection",
     city: "",
     province: "North-Western Ontario",

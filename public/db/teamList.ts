@@ -1,0 +1,88 @@
+const teamLists = [
+  {
+    name: "Doug Dixon",
+    refLink: "#team",
+    suffix: "P.Eng.",
+    title: "President",
+    group: "Leadership",
+  },
+  {
+    name: "Jigish Naik",
+    refLink: "#team",
+    suffix: "P.Eng.",
+    title: "Partner",
+    group: "Leadership",
+  },
+  {
+    name: "Chris Middleton",
+    refLink: "#team",
+    suffix: "P.Eng.",
+    title: "Senior Project Manager",
+    group: "Professionals",
+  },
+  {
+    name: "Lolo Tsung",
+    refLink: "#team",
+    suffix: "P.Eng.",
+    title: "Senior Project Manager",
+    group: "Professionals",
+  },
+  {
+    name: "Charlotte Bond",
+    refLink: "#team",
+    suffix: "P.Eng.",
+    title: "Senior Bridge Engineer",
+    group: "Professionals",
+  },
+  {
+    name: "Jamie Yeung",
+    refLink: "#team",
+    suffix: "P.Eng.",
+    title: "Project Engineer",
+    group: "Professionals",
+  },
+  {
+    name: "Sach Jayasuriya",
+    refLink: "#team",
+    suffix: "P.Eng.",
+    title: "Bridge Engineer",
+    group: "Professionals",
+  },
+  {
+    name: "Kevin Li",
+    refLink: "#team",
+    suffix: "P.Eng.",
+    title: "Bridge Engineer",
+    group: "Professionals",
+  },
+  {
+    name: "Hayley Kokkinakis",
+    refLink: "#team",
+    suffix: "EIT",
+    title: "Engineer-in-Training",
+    group: "Designers",
+  },
+  {
+    name: "Adam Aubin",
+    refLink: "#team",
+    suffix: "EIT",
+    title: "Engineer-in-Training",
+    group: "Designers",
+  },
+  {
+    name: "Mahdi Alfakisamani",
+    refLink: "#team",
+    suffix: "EIT",
+    title: "Engineer-in-Training",
+    group: "Designers",
+  },
+  {
+    name: "Evan Tije",
+    refLink: "#team",
+    suffix: "",
+    title: "Engineer-in-Training",
+    group: "Designers",
+  },
+];
+
+export default teamLists;

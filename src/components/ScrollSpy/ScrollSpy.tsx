@@ -1,24 +1,23 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ScrollSpy.css";
+import teamLists from "../../../public/db/teamList";
 
-const teamGroup = {
-  Leadership: ["Doug Dixon, P.Eng.", "Jigish Naik, P.Eng."],
-  Professionals: [
-    "Chris Middleton, P.Eng.",
-    "Charlotte Bond, P.Eng.",
-    "Lolo Tsung, P.Eng.",
-    "Jamie Yeung, P.Eng.",
-    "Sach Jayasuria, P.Eng.",
-    "Kevin Li, P.Eng.",
-  ],
-  Designers: [
-    "Hayley Kokkinakis, EIT.",
-    "Adam Aubin, EIT.",
-    "Mahdi Alfakisamani",
-    "Evan Tjie",
-  ],
-};
+interface Props {
+  name: string;
+  refLink: string;
+  suffix?: string | null;
+  title: string;
+  group: string;
+}
+
+let teamGroupsSet = new Set<string>();
+teamLists.forEach((teamMember: Props) => {
+  teamGroupsSet.add(teamMember.group);
+  // console.log("team member", teamMember.group)
+});
+
+const teamGroups: string[] = [...teamGroupsSet];
 
 const Scrollspy = () => {
   const navigate = useNavigate();
@@ -58,15 +57,15 @@ const Scrollspy = () => {
           const element = document.querySelector(`a[data-key="${entryId}"]`);
           if (entry.isIntersecting) {
             // Add the "active" class
-            console.log("Intersected entry:", entryId, element);
+            // console.log("Intersected entry:", entryId, element);
             if (element) {
               element.classList.add("active");
-              console.log("Added entry:", element);
+              // console.log("Added entry:", element);
             }
           } else {
             if (element) {
               element.classList.remove("active");
-              console.log("Removed entry:", element);
+              // console.log("Removed entry:", element);
             }
           }
         });
@@ -97,7 +96,7 @@ const Scrollspy = () => {
             className="navbar flex-column align-items-stretch"
           >
             <nav className="flex-column">
-              {Object.entries(teamGroup).map(([group, people], groupIndex) => (
+              {teamGroups.map((group, groupIndex) => (
                 <div>
                   <a
                     className="sidebar-link sidebar-group"
@@ -108,23 +107,25 @@ const Scrollspy = () => {
                     {group}
                   </a>
                   <nav className="flex-column">
-                    {people.map((person, peopleIndex) => (
-                      <div>
-                        <a
-                          className="sidebar-link sidebar-member"
-                          href={"#group-" + groupIndex + "-" + peopleIndex}
-                          data-key={"group-" + groupIndex + "-" + peopleIndex}
-                          onClick={(e) =>
-                            handleNavClick(
-                              e,
-                              "group-" + groupIndex + "-" + peopleIndex
-                            )
-                          }
-                        >
-                          {person}
-                        </a>
-                      </div>
-                    ))}
+                    {teamLists
+                      .filter((teamMember) => teamMember.group === group)
+                      .map((person, personIndex) => (
+                        <div>
+                          <a
+                            className="sidebar-link sidebar-member"
+                            href={"#group-" + groupIndex + "-" + personIndex}
+                            data-key={"group-" + groupIndex + "-" + personIndex}
+                            onClick={(e) =>
+                              handleNavClick(
+                                e,
+                                "group-" + groupIndex + "-" + personIndex
+                              )
+                            }
+                          >
+                            {person.name}
+                          </a>
+                        </div>
+                      ))}
                   </nav>
                 </div>
               ))}
@@ -153,7 +154,7 @@ const Scrollspy = () => {
             <p>5</p>
           </div>
           <div>&nbsp;</div>
-          <h4 id="group-1" className="scroll-spy-tracked">
+          <div id="group-1" className="scroll-spy-tracked">
             Professionals
             <h5 id="group-1-0" className="scroll-spy-tracked">
               Chris Middleton
@@ -203,7 +204,7 @@ const Scrollspy = () => {
             <p>3</p>
             <p>4</p>
             <p>5</p>
-          </h4>
+          </div>
           <p>...</p>
           <p>...</p>
           <p>...</p>

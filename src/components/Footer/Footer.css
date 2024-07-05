@@ -58,6 +58,7 @@ a.footer-link {
 .footer-spacer {
   background-color: transparent;
   margin-bottom: var(--footer-height);
+  z-index: -2;
 }
 
 .footer-credit {

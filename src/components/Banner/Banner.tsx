@@ -132,7 +132,7 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
             <a href="#/about">About</a>
           </li>
           <li>
-            <a href="#/">Team</a>
+            <a href="#/team">Team</a>
           </li>
           <li>
             <a href="#/">Careers</a>

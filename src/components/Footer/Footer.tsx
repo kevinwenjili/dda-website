@@ -8,6 +8,7 @@ interface Props {
 const Footer = ({ children }: Props) => {
   return (
     <>
+      <div className="footer-spacer">&nbsp;</div>
       <div className="footer-container">
         <div className="footer-logo">
           <img src="assets/logo/logo-black.png" className="logo" />

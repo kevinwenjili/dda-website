@@ -31,13 +31,13 @@ const Home: React.FC = () => {
         <div className="body-container">
           <div className="body-content">
             <div className="body-category">Structural Design+Analysis</div>
-            <div>Planning+EA</div>
-            <div>Program Management</div>
             <div>Feasibility Study</div>
             <div>New Design</div>
             <div>Rehabilitation</div>
             <div>Evaluation</div>
             <div>Load Rating</div>
+            <div>Planning+EA</div>
+            <div>Program Management</div>
           </div>
           <div className="body-img-2">
             <img src="assets/home-images/body_design.png" />
@@ -81,7 +81,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="footer-spacer">&nbsp;</div>
       <Footer />
     </>
   );

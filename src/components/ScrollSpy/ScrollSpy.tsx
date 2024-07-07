@@ -4,8 +4,10 @@ import "./ScrollSpy.css";
 import teamLists from "../../../public/db/teamList";
 
 interface Props {
-  name: string;
-  refLink: string;
+  fName: string;
+  lName: string;
+  imgLink?: string;
+  refLink?: string;
   suffix?: string | null;
   title: string;
   group: string;
@@ -19,7 +21,7 @@ teamLists.forEach((teamMember: Props) => {
 
 const teamGroups: string[] = [...teamGroupsSet];
 
-const Scrollspy = () => {
+const ScrollSpy = () => {
   const navigate = useNavigate();
 
   const handleNavClick = (
@@ -100,9 +102,11 @@ const Scrollspy = () => {
                 <div>
                   <a
                     className="sidebar-link sidebar-group"
-                    href={"#group-" + groupIndex}
-                    data-key={"group-" + groupIndex}
-                    onClick={(e) => handleNavClick(e, "group-" + groupIndex)}
+                    href={"#" + group.replace(/ /g, "-").toLowerCase()}
+                    data-key={group.replace(/ /g, "-").toLowerCase()}
+                    onClick={(e) =>
+                      handleNavClick(e, group.replace(/ /g, "-").toLowerCase())
+                    }
                   >
                     {group}
                   </a>
@@ -113,16 +117,24 @@ const Scrollspy = () => {
                         <div>
                           <a
                             className="sidebar-link sidebar-member"
-                            href={"#group-" + groupIndex + "-" + personIndex}
-                            data-key={"group-" + groupIndex + "-" + personIndex}
+                            href={
+                              "#" +
+                              person.fName[0].toLowerCase() +
+                              person.lName.toLowerCase()
+                            }
+                            data-key={
+                              person.fName[0].toLowerCase() +
+                              person.lName.toLowerCase()
+                            }
                             onClick={(e) =>
                               handleNavClick(
                                 e,
-                                "group-" + groupIndex + "-" + personIndex
+                                person.fName[0].toLowerCase() +
+                                  person.lName.toLowerCase()
                               )
                             }
                           >
-                            {person.name}
+                            {person.fName + " " + person.lName}
                           </a>
                         </div>
                       ))}
@@ -133,117 +145,56 @@ const Scrollspy = () => {
           </nav>
         </div>
 
-        <div data-bs-target="#team-directory" className="column content">
-          <div id="group-0" className="scroll-spy-tracked content-group">
-            Leadership
-            <div id="group-0-0" className="scroll-spy-tracked content-member">
-              Doug Dixon
-            </div>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <div id="group-0-1" className="scroll-spy-tracked content-member">
-              Jigish Naik
-            </div>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-          </div>
-          <div>&nbsp;</div>
-          <div id="group-1" className="scroll-spy-tracked">
-            Professionals
-            <h5 id="group-1-0" className="scroll-spy-tracked">
-              Chris Middleton
-            </h5>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <h5 id="group-1-1" className="scroll-spy-tracked">
-              Charlotte Bond
-            </h5>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <h5 id="group-1-2" className="scroll-spy-tracked">
-              Lolo Tsung
-            </h5>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <h5 id="group-1-3" className="scroll-spy-tracked">
-              Jamie Yeung
-            </h5>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <h5 id="group-1-4" className="scroll-spy-tracked">
-              Sach Jayasuria
-            </h5>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <h5 id="group-1-5" className="scroll-spy-tracked">
-              Kevin Li
-            </h5>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-          </div>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
+        <div className="column content">
+          {teamGroups.map((group, groupIndex) => (
+            <>
+              {" "}
+              <div
+                id={group.replace(/ /g, "-").toLowerCase()}
+                className="scroll-spy-tracked content-group"
+              >
+                {group}
+                {teamLists
+                  .filter((teamMember) => teamMember.group === group)
+                  .map((person, personIndex) => (
+                    <>
+                      <div
+                        id={
+                          person.fName[0].toLowerCase() +
+                          person.lName.toLowerCase()
+                        }
+                        className="scroll-spy-tracked content-member"
+                      >
+                        {person.fName +
+                          " " +
+                          person.lName +
+                          (person.suffix ? ", " + person.suffix : "")}
+                      </div>
+                      <div>{person.title}</div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                      <div> - </div>
+                    </>
+                  ))}
+              </div>
+            </>
+          ))}
         </div>
       </div>
     </>
   );
 };
 
-export default Scrollspy;
+export default ScrollSpy;

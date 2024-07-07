@@ -58,8 +58,36 @@ a.sidebar-link.sidebar-group.active {
 }
 
 a.sidebar-link.sidebar-member.active {
-  margin-left: 15px;
+  margin-left: 10px;
   color: #000000;
   background-color: transparent;
   transition: margin 200ms ease-in-out;
+}
+
+.content-group {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.content-image {
+  width: 200px;
+  height: 200px;
+  margin: 10px 10px 10px 0;
+}
+
+.content-member {
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.content-member.name {
+  font-weight: 500;
+}
+
+.content-container {
+  max-width: 800px;
+}
+
+.content-display {
+  display: inline-block;
 }

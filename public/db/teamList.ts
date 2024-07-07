@@ -2,7 +2,7 @@ const teamLists = [
   {
     fName: "Doug",
     lName: "Dixon",
-    imgLink: "",
+    imgLink: "db/images/people/ddixon.jpeg",
     refLink: "#team",
     suffix: "P.Eng.",
     title: "President",
@@ -11,7 +11,7 @@ const teamLists = [
   {
     fName: "Jigish",
     lName: "Naik",
-    imgLink: "",
+    imgLink: "db/images/people/jnaik.jpeg",
     refLink: "#team",
     suffix: "P.Eng.",
     title: "Partner",
@@ -20,7 +20,7 @@ const teamLists = [
   {
     fName: "Chris",
     lName: "Middleton",
-    imgLink: "",
+    imgLink: "db/images/people/cmiddleton.jpeg",
     refLink: "#team",
     suffix: "P.Eng.",
     title: "Senior Project Manager",
@@ -29,7 +29,7 @@ const teamLists = [
   {
     fName: "Lolo",
     lName: "Tsung",
-    imgLink: "",
+    imgLink: "db/images/people/ltsung.jpeg",
     refLink: "#team",
     suffix: "P.Eng.",
     title: "Senior Project Manager",
@@ -38,7 +38,7 @@ const teamLists = [
   {
     fName: "Charlotte",
     lName: "Bond",
-    imgLink: "",
+    imgLink: "db/images/people/cbond.jpeg",
     refLink: "#team",
     suffix: "P.Eng.",
     title: "Senior Bridge Engineer",
@@ -47,7 +47,7 @@ const teamLists = [
   {
     fName: "Jamie",
     lName: "Yeung",
-    imgLink: "",
+    imgLink: "db/images/people/jyeung.jpeg",
     refLink: "#team",
     suffix: "P.Eng.",
     title: "Project Engineer",
@@ -56,7 +56,7 @@ const teamLists = [
   {
     fName: "Sach",
     lName: "Jayasuriya",
-    imgLink: "",
+    imgLink: "db/images/people/sjayasuriya.jpeg",
     refLink: "#team",
     suffix: "P.Eng.",
     title: "Bridge Engineer",
@@ -65,7 +65,7 @@ const teamLists = [
   {
     fName: "Kevin",
     lName: "Li",
-    imgLink: "",
+    imgLink: "db/images/people/kli.jpeg",
     refLink: "#team",
     suffix: "P.Eng.",
     title: "Bridge Engineer",
@@ -74,7 +74,7 @@ const teamLists = [
   {
     fName: "Hayley", 
     lName: "Kokkinakis",
-    imgLink: "",
+    imgLink: "db/images/people/hkokkinakis.jpeg",
     refLink: "#team",
     suffix: "EIT",
     title: "Engineer-in-Training",
@@ -83,7 +83,7 @@ const teamLists = [
   {
     fName: "Adam", 
     lName: "Aubin",
-    imgLink: "",
+    imgLink: "db/images/people/aaubin.jpeg",
     refLink: "#team",
     suffix: "EIT",
     title: "Engineer-in-Training",
@@ -92,7 +92,7 @@ const teamLists = [
   {
     fName: "Mahdi", 
     lName: "Alfakisamani",
-    imgLink: "",
+    imgLink: "db/images/people/unknown.jpg",
     refLink: "#team",
     suffix: "",
     title: "Engineer-in-Training",
@@ -101,7 +101,7 @@ const teamLists = [
   {
     fName: "Evan", 
     lName: "Tije",
-    imgLink: "",
+    imgLink: "db/images/people/unknown.jpg",
     refLink: "#team",
     suffix: "",
     title: "Engineer-in-Training",

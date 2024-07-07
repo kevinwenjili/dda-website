@@ -49,43 +49,43 @@ const ScrollSpy = () => {
   };
 
   useEffect(() => {
-    // Create a new Intersection Observer instance
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Loop over the entries
-        entries.forEach((entry) => {
-          // If the element is in the viewport
-          const entryId = entry.target.id;
-          const element = document.querySelector(`a[data-key="${entryId}"]`);
-          if (entry.isIntersecting) {
-            // Add the "active" class
-            // console.log("Intersected entry:", entryId, element);
-            if (element) {
+    const setupObserver = () => {
+      // Create a new Intersection Observer instance
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // Loop over the entries
+          entries.forEach((entry) => {
+            // If the element is in the viewport
+            const entryId = entry.target.id;
+            const element = document.querySelector(`[data-key="${entryId}"]`);
+            if (entry.isIntersecting && element) {
+              // Add the "active" class
+              // console.log("Intersected entry:", entryId, element);
               element.classList.add("active");
               // console.log("Added entry:", element);
-            }
-          } else {
-            if (element) {
+            } else if (element) {
               element.classList.remove("active");
               // console.log("Removed entry:", element);
             }
-          }
-        });
-      },
-      {
-        rootMargin: "0px 0% -75% 0%", // Adjust this to change the "viewport"
-      }
-    );
+          });
+        },
+        {
+          rootMargin: "0px 0% -80% 0%", // Adjust this to change the "viewport"
+        }
+      );
 
-    // Observe each element
-    let elements = document.querySelectorAll(".scroll-spy-tracked");
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
+      // Observe each element
+      let elements = document.querySelectorAll(".scroll-spy-tracked");
+      elements.forEach((element) => {
+        observer.observe(element);
+      });
 
-    return () => {
-      elements.forEach((element) => observer.unobserve(element));
+      return () => {
+        elements.forEach((element) => observer.unobserve(element));
+      };
     };
+
+    setTimeout(() => setupObserver(), 100);
   }, []);
 
   return (
@@ -154,40 +154,33 @@ const ScrollSpy = () => {
                 className="scroll-spy-tracked content-group"
               >
                 {group}
-                {teamLists
-                  .filter((teamMember) => teamMember.group === group)
-                  .map((person, personIndex) => (
-                    <>
-                      <div
-                        id={
-                          person.fName[0].toLowerCase() +
-                          person.lName.toLowerCase()
-                        }
-                        className="scroll-spy-tracked content-member"
-                      >
-                        {person.fName +
-                          " " +
-                          person.lName +
-                          (person.suffix ? ", " + person.suffix : "")}
-                      </div>
-                      <div>{person.title}</div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                      <div> - </div>
-                    </>
-                  ))}
+                <div className="content-container">
+                  {teamLists
+                    .filter((teamMember) => teamMember.group === group)
+                    .map((person, personIndex) => (
+                      <>
+                        <span className="content-display">
+                          <img
+                            id={
+                              person.fName[0].toLowerCase() +
+                              person.lName.toLowerCase()
+                            }
+                            className="scroll-spy-tracked content-image"
+                            src={person.imgLink}
+                          />
+                          <div className="content-member name">
+                            {person.fName +
+                              " " +
+                              person.lName +
+                              (person.suffix ? ", " + person.suffix : "")}
+                          </div>
+                          <div className="content-member title">
+                            {person.title}
+                          </div>
+                        </span>
+                      </>
+                    ))}
+                </div>
               </div>
             </>
           ))}

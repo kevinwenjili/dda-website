@@ -1,6 +1,6 @@
 const projectLists = [
   {
-    img: "db/images/eastern-ave-fatigue-evaluation.jpg",
+    img: "db/images/projects/eastern-ave-fatigue-evaluation.jpg",
     refLink: "#team",
     projectTitle: "Eastern Avenue Interchange Fatigue Evaluation",
     city: "Toronto",
@@ -9,7 +9,7 @@ const projectLists = [
     projectType: "evaluation",
   },
   {
-    img: "db/images/ship-channel-rehabilitation.jpg",
+    img: "db/images/projects/ship-channel-rehabilitation.jpg",
     refLink: "#team",
     projectTitle: "Cherry Street Bascule Bridge Rehabilitation - Phase I",
     city: "Toronto",
@@ -18,7 +18,7 @@ const projectLists = [
     projectType: "specialty",
   },
   {
-    img: "db/images/dvp-coating-rehabilitation.jpg",
+    img: "db/images/projects/dvp-coating-rehabilitation.jpg",
     refLink: "#team",
     projectTitle: "Don Valley Parkway Steel Bridges Coating Rehabilitation",
     city: "Toronto",
@@ -27,7 +27,7 @@ const projectLists = [
     projectType: "design",
   },
   {
-    img: "db/images/third-street-bridge-replacement.jpg",
+    img: "db/images/projects/third-street-bridge-replacement.jpg",
     refLink: "#team",
     projectTitle: "Third Street Bridge Rehabilitation",
     city: "Chatham-Kent",
@@ -36,7 +36,7 @@ const projectLists = [
     projectType: "design",
   },
   {
-    img: "db/images/various-culvert-rehabilitation.jpg",
+    img: "db/images/projects/various-culvert-rehabilitation.jpg",
     refLink: "#team",
     projectTitle: "City of Toronto Culverts Rehabilitation and Replacement",
     city: "Toronto",
@@ -45,7 +45,7 @@ const projectLists = [
     projectType: "design",
   },
   {
-    img: "db/images/osim-inspection.jpg",
+    img: "db/images/projects/osim-inspection.jpg",
     refLink: "#team",
     projectTitle: "City of Toronto Biennial OSIM Inspection Program",
     city: "Toronto",
@@ -54,7 +54,7 @@ const projectLists = [
     projectType: "inspection",
   },
   {
-    img: "db/images/fgge-hammer-sounding.jpg",
+    img: "db/images/projects/fgge-hammer-sounding.jpg",
     refLink: "#team",
     projectTitle: "Gardiner Expressway Soffit and Substructure Delamination Inspection",
     city: "Toronto",
@@ -63,7 +63,7 @@ const projectLists = [
     projectType: "inspection",
   },
   {
-    img: "db/images/nwr-underwater-inspection.jpg",
+    img: "db/images/projects/nwr-underwater-inspection.jpg",
     refLink: "#team",
     projectTitle: "MTO Northwest Region Bridges and Culverts Underwater Inspection",
     city: "",

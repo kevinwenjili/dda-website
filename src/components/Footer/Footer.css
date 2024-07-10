@@ -1,6 +1,6 @@
 /* Footer */
 :root {
-  --footer-height: 120px;
+  --footer-height: 180px;
 }
 
 .footer-container {
@@ -10,15 +10,24 @@
   width: 100vw;
   height: calc(var(--footer-height)+var(--banner-clearance));
   z-index: -1 !important;
-  display: grid;
-  grid-template-columns: 74px minmax(330px, 3fr) 1fr minmax(200px, 1fr);
   padding: 30px var(--banner-clearance) var(--banner-clearance)
     var(--banner-clearance);
   border-top: solid 1px rgb(255, 255, 255);
   color: #000000;
+  background-color: #90fcf9;
+}
+
+div.footer-header {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0px 0px 10px 0px;
+}
+
+.footer-display {
+  display: grid;
+  grid-template-columns: 74px minmax(330px, 3fr) 1fr minmax(200px, 1fr);
   font-size: 14px;
   line-height: 120%;
-  background-color: #8ab0ab;
 }
 
 .footer-column {
@@ -62,7 +71,7 @@ a.footer-link {
 }
 
 .footer-credit {
-  margin-top: calc(var(--footer-height) - 38px);
+  margin-top: calc(var(--footer-height) - 98px);
   font-size: 12px;
   text-align: end;
 }
@@ -71,7 +80,7 @@ a.footer-link {
   .footer-spacer {
     margin-bottom: calc(var(--footer-height) + 40px);
   }
-  .footer-container {
+  .footer-display {
     grid-template-columns: 74px minmax(330px, 3fr);
   }
   .footer-credit {

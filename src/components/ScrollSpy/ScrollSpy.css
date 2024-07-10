@@ -1,6 +1,12 @@
+.team-container {
+  background-color: #ffffff;
+}
+
+
 .row {
   display: flex;
   height: 100%;
+  width: 100%;
   background-color: #ffffff;
 }
 
@@ -17,8 +23,8 @@
 
 .column.content {
   background-color: #ffffff;
-  flex: 10;
-  padding-top: 30px;
+  flex: 9;
+  padding: 30px 0 10px 0;
 }
 
 #team-directory {
@@ -27,6 +33,7 @@
 
 .page-title-modified {
   padding: 20px var(--banner-clearance) 0px calc(var(--banner-clearance) - 5px);
+  width: 90vw;
 }
 
 a.sidebar-link {

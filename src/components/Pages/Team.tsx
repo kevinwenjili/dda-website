@@ -15,6 +15,11 @@ const Team: React.FC = () => {
       <div className="navbar-spacer">&nbsp;</div>
       {/* <div className="page-title">Team</div> */}
       <ScrollSpy />
+      <div className="bottom-spacer">&nbsp;</div>
+      <div className="bottom-spacer">&nbsp;</div>
+      <div className="bottom-spacer">&nbsp;</div>
+      <div className="bottom-spacer">&nbsp;</div>
+      <div className="bottom-spacer">&nbsp;</div>
       <Footer />
     </>
   );

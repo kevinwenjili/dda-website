@@ -81,6 +81,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="bottom-spacer">&nbsp;</div>
       <Footer />
     </>
   );

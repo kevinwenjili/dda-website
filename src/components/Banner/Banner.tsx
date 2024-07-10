@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router";
+import HandleNavClick from "../HandleNavClick";
 import "./Banner.css";
 import "./Banner-Std.css";
 import "./Banner-Alt.css";
@@ -8,6 +10,7 @@ interface BannerProps {
 }
 
 const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = 280;
@@ -48,7 +51,8 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
       }
 
       if (y >= scrollPos && logoElement?.classList.contains("assemble-logo")) {
-        setTimeout(() => {        logoElement.classList.remove("assemble-logo");
+        setTimeout(() => {
+          logoElement.classList.remove("assemble-logo");
           logoComponents.forEach((element) => {
             animations.forEach((animation) => {
               if (element.classList.contains(animation)) {
@@ -59,7 +63,8 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
               }
             });
           });
-          logoElement.classList.add("disassemble-logo");}, 0);
+          logoElement.classList.add("disassemble-logo");
+        }, 0);
       } else if (
         y < scrollPos &&
         logoElement?.classList.contains("disassemble-logo")
@@ -136,6 +141,21 @@ const Banner: React.FC<BannerProps> = ({ bannerStyle = "std" }) => {
           </li>
           <li>
             <a href="#/">Careers</a>
+          </li>
+          <li>
+            <a
+              href="#/footer"
+              onClick={(e) =>
+                HandleNavClick({
+                  event: e,
+                  targetId: "footer",
+                  offset: -1000000,
+                  navigate: navigate,
+                })
+              }
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </div>

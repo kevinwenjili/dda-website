@@ -164,7 +164,7 @@
 }
 
 /* Menu Default Form */
-@media (min-width: 600px) {
+@media (min-width: 680px) {
   .banner-text li {
     float: left;
     margin: 36px calc(var(--banner-clearance) - var(--default-padding)) 0px

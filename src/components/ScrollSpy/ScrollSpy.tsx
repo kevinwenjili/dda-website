@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ScrollSpy.css";
 import teamLists from "../../../public/db/teamList";
+import HandleNavClick from "../HandleNavClick";
 
 interface Props {
   fName: string;
@@ -22,32 +23,9 @@ teamLists.forEach((teamMember: Props) => {
 const teamGroups: string[] = [...teamGroupsSet];
 
 const ScrollSpy = () => {
+  
   const navigate = useNavigate();
-
-  const handleNavClick = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    targetId: string
-  ) => {
-    event.preventDefault();
-    navigate(`#${targetId}`);
-    const element = document.getElementById(targetId);
-    if (element) {
-      // Get the height of the navbar
-      const navbarHeight = document.getElementById("banner")?.clientHeight || 0;
-
-      // Adjust scroll position to account for the navbar after the scrollIntoView animation
-      setTimeout(() => {
-        const elementRect = element.getBoundingClientRect();
-        const offsetPosition = window.scrollY + elementRect.top - navbarHeight;
-
-        window.scrollTo({
-          top: offsetPosition - 30,
-          behavior: "smooth",
-        });
-      }, 5); // Adjust timeout duration if needed
-    }
-  };
-
+  
   useEffect(() => {
     const setupObserver = () => {
       // Create a new Intersection Observer instance
@@ -89,7 +67,7 @@ const ScrollSpy = () => {
   }, []);
 
   return (
-    <>
+    <div className="team-container">
       <div className="row">
         <div className="column sidebar">
           <div className="page-title page-title-modified">Team</div>
@@ -105,7 +83,12 @@ const ScrollSpy = () => {
                     href={"#" + group.replace(/ /g, "-").toLowerCase()}
                     data-key={group.replace(/ /g, "-").toLowerCase()}
                     onClick={(e) =>
-                      handleNavClick(e, group.replace(/ /g, "-").toLowerCase())
+                      HandleNavClick({
+                        event: e,
+                        targetId: group.replace(/ /g, "-").toLowerCase(),
+                        offset: 30,
+                        navigate: navigate
+                      })
                     }
                   >
                     {group}
@@ -127,11 +110,14 @@ const ScrollSpy = () => {
                               person.lName.toLowerCase()
                             }
                             onClick={(e) =>
-                              handleNavClick(
-                                e,
-                                person.fName[0].toLowerCase() +
-                                  person.lName.toLowerCase()
-                              )
+                              HandleNavClick({
+                                event: e,
+                                targetId:
+                                  person.fName[0].toLowerCase() +
+                                  person.lName.toLowerCase(),
+                                offset: 30,
+                                navigate: navigate
+                              })
                             }
                           >
                             {person.fName + " " + person.lName}
@@ -186,7 +172,7 @@ const ScrollSpy = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

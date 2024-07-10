@@ -34,7 +34,7 @@ function About() {
           </p>
         </div>
       </div>
-
+      <div className="bottom-spacer">&nbsp;</div>
       <Footer />
     </>
   );

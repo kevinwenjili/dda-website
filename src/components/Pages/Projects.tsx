@@ -102,6 +102,7 @@ function Projects() {
       <Filter handleChange={handleChange} />
       <Project result={result} />
       {/* </div> */}
+      <div className="bottom-spacer">&nbsp;</div>
       <Footer />
     </>
   );

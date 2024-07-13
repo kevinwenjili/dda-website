@@ -51,7 +51,7 @@ const Modal = ({ showModal, handleHide, person }: Props) => {
             <div className="modal-header">
               <div className="modal-title fs-5" id="staticBackdropLabel">
                 <img
-                  className="scroll-spy-tracked content-image"
+                  className="scroll-spy-tracked person-modal-image"
                   src={person.imgLink}
                 />
                 <p className="person-modal-name">
@@ -63,41 +63,22 @@ const Modal = ({ showModal, handleHide, person }: Props) => {
                 </p>
                 <p className="person-modal-title">{person.title}</p>
               </div>
-              {/* <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-                onClick={handleHide}
-              ></button> */}
+              <div className="modal-btn-container">
+                <button
+                  type="button"
+                  className="btn-close modal-btn"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  onClick={handleHide}
+                ></button>
+              </div>
             </div>
             <div className="modal-body">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
+              {person.content.map((paragraph: string) => (
+                <p>{paragraph}</p>
+              ))}
             </div>
-            <div className="modal-footer">
+            {/* <div className="modal-footer">
               <button
                 type="button"
                 className="btn btn-secondary"
@@ -106,7 +87,7 @@ const Modal = ({ showModal, handleHide, person }: Props) => {
               >
                 Return
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

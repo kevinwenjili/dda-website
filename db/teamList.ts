@@ -8,6 +8,7 @@ const teamLists = [
     altSuffix: "M.A.Sc.",
     title: "President",
     group: "Leadership",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
     fName: "Jigish",
@@ -18,6 +19,7 @@ const teamLists = [
     altSuffix: "M.Sc.",
     title: "Partner",
     group: "Leadership",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
     fName: "Chris",
@@ -28,6 +30,7 @@ const teamLists = [
     altSuffix: "",
     title: "Senior Project Manager",
     group: "Professionals",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
     fName: "Lolo",
@@ -38,6 +41,7 @@ const teamLists = [
     altSuffix: "",
     title: "Senior Project Manager",
     group: "Professionals",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
     fName: "Charlotte",
@@ -48,6 +52,7 @@ const teamLists = [
     altSuffix: "",
     title: "Senior Bridge Engineer",
     group: "Professionals",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
     fName: "Jamie",
@@ -58,6 +63,7 @@ const teamLists = [
     altSuffix: "PhD.",
     title: "Project Engineer",
     group: "Professionals",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
     fName: "Sach",
@@ -68,6 +74,7 @@ const teamLists = [
     altSuffix: "",
     title: "Bridge Engineer",
     group: "Professionals",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
     fName: "Kevin",
@@ -78,9 +85,10 @@ const teamLists = [
     altSuffix: "",
     title: "Bridge Engineer",
     group: "Professionals",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
-    fName: "Hayley", 
+    fName: "Hayley",
     lName: "Kokkinakis",
     imgLink: "db/images/people/hkokkinakis.jpeg",
     refLink: "#team",
@@ -88,9 +96,10 @@ const teamLists = [
     altSuffix: "",
     title: "Bridge Designer",
     group: "Designers",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
-    fName: "Adam", 
+    fName: "Adam",
     lName: "Aubin",
     imgLink: "db/images/people/aaubin.jpeg",
     refLink: "#team",
@@ -98,9 +107,10 @@ const teamLists = [
     altSuffix: "",
     title: "Bridge Designer",
     group: "Designers",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
-    fName: "Mahdi", 
+    fName: "Mahdi",
     lName: "Alfakisamani",
     imgLink: "db/images/people/unknown.jpg",
     refLink: "#team",
@@ -108,9 +118,10 @@ const teamLists = [
     altSuffix: "PhD.",
     title: "Junior Bridge Designer",
     group: "Designers",
+    content: ["paragraph 1", "paragraph 2"],
   },
   {
-    fName: "Evan", 
+    fName: "Evan",
     lName: "Tije",
     imgLink: "db/images/people/unknown.jpg",
     refLink: "#team",
@@ -118,6 +129,7 @@ const teamLists = [
     altSuffix: "",
     title: "Junior Bridge Designer",
     group: "Designers",
+    content: ["paragraph 1", "paragraph 2"],
   },
 ];
 

@@ -18,14 +18,14 @@ function About() {
         </div>
         <div className="about-div">
           <p className="about-p">
-            Doug Dixon & Associates (DDA) was established in 2017 by Doug Dixon,
-            P.Eng. and Jigish Naik, P.Eng.
+            Doug Dixon & Associates (DDA) is a bridge and structural engineering
+            consulting firm established in 2017 by Doug Dixon, P.Eng. and Jigish
+            Naik, P.Eng.
           </p>
           <p className="about-p">
-            Starting as a two-person bridge and structural engineering firm, DDA
-            has grown sustainably under Doug and Jigish's leadership. Today, our
-            team comprises over 30 engineering professionals, technicians, and
-            support staff.
+            Starting as a two-person team, DDA has grown sustainably under Doug
+            and Jigish's leadership. Today, our team comprises over 30
+            engineering professionals, technicians, and support staff.
           </p>
           <p className="about-p">
             With the combined expertise of our senior professionals, we have

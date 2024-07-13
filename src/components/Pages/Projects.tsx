@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 
 import Card from "../Card/Card";
-import Filter from "../Filter";
+import Filter from "../Filter/Filter";
 import Search from "../Search/Search";
 import Project from "../Card/Project";
 import Banner from "../Banner/Banner";

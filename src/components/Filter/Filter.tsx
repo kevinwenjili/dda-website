@@ -2,10 +2,10 @@ import FilterByServices from "./FilterByServices";
 import "./ProjectFilter.css";
 
 interface Props {
-    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Filter = ({ handleChange }:Props ) => {
+const Filter = ({ handleChange }: Props) => {
   return (
     <>
       <section className="filter-container">

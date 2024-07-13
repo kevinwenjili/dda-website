@@ -12,6 +12,7 @@ import Home from "./components/Pages/Home";
 import Projects from "./components/Pages/Projects";
 import About from "./components/Pages/About";
 import Team from "./components/Pages/Team";
+import Careers from "./components/Pages/Careers";
 
 function HashScroll() {
   const { hash } = useLocation();
@@ -39,6 +40,7 @@ const App: React.FC = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/careers" element={<Careers />} />
       </Routes>
     </Router>
   );

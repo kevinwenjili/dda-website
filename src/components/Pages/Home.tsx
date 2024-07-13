@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   const imageList: string[] = [
     "assets/home-images/home_gallery_1.jpg",
     "assets/home-images/home_gallery_6.jpg",
-    "assets/home-images/home_gallery_3.jpg",
+    "assets/home-images/home_gallery_4.jpg",
   ];
 
   return (

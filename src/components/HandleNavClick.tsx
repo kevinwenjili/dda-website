@@ -7,7 +7,6 @@ interface Props {
   offset: number;
   navigate: NavigateFunction;
 }
-console.log("handle nav click");
 
 
 const HandleNavClick = ({ event, targetId, offset, navigate }: Props) => {

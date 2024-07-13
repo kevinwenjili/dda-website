@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ScrollSpy.css";
 import teamLists from "../../../public/db/teamList";
 import HandleNavClick from "../HandleNavClick";
+import Modal from "../Modal/Modal";
 
 interface Props {
   fName: string;
@@ -10,6 +11,7 @@ interface Props {
   imgLink?: string;
   refLink?: string;
   suffix?: string | null;
+  altSuffix?: string | null;
   title: string;
   group: string;
 }
@@ -23,9 +25,17 @@ teamLists.forEach((teamMember: Props) => {
 const teamGroups: string[] = [...teamGroupsSet];
 
 const ScrollSpy = () => {
-  
   const navigate = useNavigate();
-  
+
+  const [showModal, setShowModal] = useState(false);
+  const [modalPerson, setModalPerson] = useState<Props | null>(null);
+
+  const handleShow = (person: Props) => {
+    setModalPerson(person);
+    setShowModal(true);
+  };
+  const handleHide = () => setShowModal(false);
+
   useEffect(() => {
     const setupObserver = () => {
       // Create a new Intersection Observer instance
@@ -77,7 +87,7 @@ const ScrollSpy = () => {
           >
             <nav className="flex-column">
               {teamGroups.map((group, groupIndex) => (
-                <div>
+                <div key={"sidebar-group-" + groupIndex}>
                   <a
                     className="sidebar-link sidebar-group"
                     href={"#" + group.replace(/ /g, "-").toLowerCase()}
@@ -87,7 +97,7 @@ const ScrollSpy = () => {
                         event: e,
                         targetId: group.replace(/ /g, "-").toLowerCase(),
                         offset: 30,
-                        navigate: navigate
+                        navigate: navigate,
                       })
                     }
                   >
@@ -97,7 +107,7 @@ const ScrollSpy = () => {
                     {teamLists
                       .filter((teamMember) => teamMember.group === group)
                       .map((person, personIndex) => (
-                        <div>
+                        <div key={"sidebar-person-" + personIndex}>
                           <a
                             className="sidebar-link sidebar-member"
                             href={
@@ -116,7 +126,7 @@ const ScrollSpy = () => {
                                   person.fName[0].toLowerCase() +
                                   person.lName.toLowerCase(),
                                 offset: 30,
-                                navigate: navigate
+                                navigate: navigate,
                               })
                             }
                           >
@@ -133,8 +143,7 @@ const ScrollSpy = () => {
 
         <div className="column content">
           {teamGroups.map((group, groupIndex) => (
-            <>
-              {" "}
+            <div key={"content-group-" + groupIndex}>
               <div
                 id={group.replace(/ /g, "-").toLowerCase()}
                 className="scroll-spy-tracked content-group"
@@ -144,34 +153,46 @@ const ScrollSpy = () => {
                   {teamLists
                     .filter((teamMember) => teamMember.group === group)
                     .map((person, personIndex) => (
-                      <>
+                      <div key={"content-person-" + personIndex}>
                         <span className="content-display">
-                          <img
-                            id={
-                              person.fName[0].toLowerCase() +
-                              person.lName.toLowerCase()
-                            }
-                            className="scroll-spy-tracked content-image"
-                            src={person.imgLink}
-                          />
-                          <div className="content-member name">
-                            {person.fName +
-                              " " +
-                              person.lName +
-                              (person.suffix ? ", " + person.suffix : "")}
-                          </div>
-                          <div className="content-member title">
-                            {person.title}
-                          </div>
+                          <a
+                            className="people-card"
+                            onClick={() => handleShow(person)}
+                          >
+                            <img
+                              id={
+                                person.fName[0].toLowerCase() +
+                                person.lName.toLowerCase()
+                              }
+                              className="scroll-spy-tracked content-image"
+                              src={person.imgLink}
+                            />
+                            <div className="content-member name">
+                              {person.fName +
+                                " " +
+                                person.lName +
+                                (person.suffix ? ", " + person.suffix : "")}
+                            </div>
+                            <div className="content-member title">
+                              {person.title}
+                            </div>
+                          </a>
                         </span>
-                      </>
+                      </div>
                     ))}
                 </div>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>
+      {showModal && (
+        <Modal
+          showModal={showModal}
+          handleHide={handleHide}
+          person={modalPerson}
+        />
+      )}
     </div>
   );
 };

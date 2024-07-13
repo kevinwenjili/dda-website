@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ScrollSpy.css";
-import teamLists from "../../../public/db/teamList";
+
 import HandleNavClick from "../HandleNavClick";
 import Modal from "../Modal/Modal";
+
+import "./ScrollSpy.css";
+import teamLists from "../../../public/db/teamList";
 
 interface Props {
   fName: string;
@@ -14,6 +16,7 @@ interface Props {
   altSuffix?: string | null;
   title: string;
   group: string;
+  content: string[];
 }
 
 let teamGroupsSet = new Set<string>();
@@ -153,32 +156,33 @@ const ScrollSpy = () => {
                   {teamLists
                     .filter((teamMember) => teamMember.group === group)
                     .map((person, personIndex) => (
-                      <div key={"content-person-" + personIndex}>
-                        <span className="content-display">
-                          <a
-                            className="people-card"
-                            onClick={() => handleShow(person)}
-                          >
-                            <img
-                              id={
-                                person.fName[0].toLowerCase() +
-                                person.lName.toLowerCase()
-                              }
-                              className="scroll-spy-tracked content-image"
-                              src={person.imgLink}
-                            />
-                            <div className="content-member name">
-                              {person.fName +
-                                " " +
-                                person.lName +
-                                (person.suffix ? ", " + person.suffix : "")}
-                            </div>
-                            <div className="content-member title">
-                              {person.title}
-                            </div>
-                          </a>
-                        </span>
-                      </div>
+                      <span
+                        key={"content-person-" + personIndex}
+                        className="content-display"
+                      >
+                        <a
+                          className="people-card"
+                          onClick={() => handleShow(person)}
+                        >
+                          <img
+                            id={
+                              person.fName[0].toLowerCase() +
+                              person.lName.toLowerCase()
+                            }
+                            className="scroll-spy-tracked content-image"
+                            src={person.imgLink}
+                          />
+                          <div className="content-member name">
+                            {person.fName +
+                              " " +
+                              person.lName +
+                              (person.suffix ? ", " + person.suffix : "")}
+                          </div>
+                          <div className="content-member title">
+                            {person.title}
+                          </div>
+                        </a>
+                      </span>
                     ))}
                 </div>
               </div>

@@ -2,54 +2,82 @@ import { Fragment, useState } from "react";
 import { MouseEvent } from "react";
 
 interface Props {
-  items: string[];
-  heading?: string;
-  onSelectItem: (item: string) => void;
+  positions: any;
 }
 
-function Accordion({ items, heading, onSelectItem }: Props) {
-  // State Hook
-  //   const arr = useState(-1)
-  //   arr[0] // variable (selectedIndex)
-  //   arr[1] // updater function
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-  // Example of a name state
-  //   const [name, setName] = useState('');
-
-  const getList = () => {
-    return items.length === 0 ? <p>No job posting at the moment</p> : null;
-  };
-
-  // Event Handeler
-  const handleClick = (event: React.MouseEvent) => console.log(event);
-
+const Accordion = ({ positions }: Props) => {
   return (
     <>
-      <h1>{heading}</h1>
-      {getList()}
-      {/* Alternative methods: */}
-      {/* {items.length === 0 ? <p>No item found</p> : null} */}
-      {/* {items.length === 0 && <p>No item found</p>} */}
-      <ul className="list-group">
-        {items.map((item, index) => (
-          <li
-            className={
-              selectedIndex === index
-                ? "list-group-item active"
-                : "list-group-item"
-            }
-            key={item}
-            onClick={() => {
-              setSelectedIndex(index);
-              onSelectItem(item);
-            }}
-          >
-            {item}
-          </li>
+      <div className="accordion accordion-flush" id="careersBoard">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <div className="position-header-category">
+              <span>Open Positions</span>
+              <span>Type</span>
+              <span>Office Location</span>
+            </div>
+          </h2>
+        </div>
+        {positions.map((position: any, index: number) => (
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button
+                className="accordion-button collapsed position-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target={"#collapse" + index}
+                aria-expanded="false"
+                aria-controls={"collapse" + index}
+              >
+                <div className="position-header-content">
+                  <span>
+                    <strong>{position.title}</strong>
+                  </span>
+                  <span>{position.type}</span>
+                  <span>{position.location}</span>
+                </div>
+              </button>
+            </h2>
+            <div
+              id={"collapse" + index}
+              className="accordion-collapse collapse"
+              data-bs-parent="#careersBoard"
+            >
+              <div className="accordion-body position-body-content">
+                <div>
+                  <strong>Description and Responsibilities</strong>
+                </div>
+                <div>{position.description}</div>
+                <ul>
+                  {position.descriptionList.map((dList: string) => (
+                    <li>{dList}</li>
+                  ))}
+                </ul>
+                <div>
+                  <strong>Qualifications</strong>
+                </div>
+                <div>{position.qualification}</div>
+                <ul>
+                  {position.qualificationList.map((qList: string) => (
+                    <li>{qList}</li>
+                  ))}
+                </ul>
+                <a
+                  href={
+                    "mailto:careers@dougdixonassociates.com?subject=Application for " +
+                    position.title +
+                    "&body=[Remember to attach your cover letter and resume!]"
+                  }
+                >
+                  Apply Today
+                </a>
+              </div>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </>
   );
-}
+};
 
 export default Accordion;

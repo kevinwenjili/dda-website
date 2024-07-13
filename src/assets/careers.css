@@ -1,0 +1,54 @@
+.careers-container {
+  background-color: #ffffff;
+  padding: var(--banner-clearance);
+}
+
+button.position-button {
+  padding: 10px 5px 10px 5px;
+}
+
+.position-header-category {
+  display: grid;
+  grid-template-columns: 7fr 3fr 4fr;
+  width: 80vw;
+  padding: 5px 0px 10px 0px;
+}
+
+.position-header-category span {
+  padding: 0 0 0 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.position-header-content {
+  display: grid;
+  grid-template-columns: 7fr 3fr 4fr;
+  width: 80vw;
+}
+
+.position-header-content span {
+  margin: 0 10px 0 0;
+  color: #003366;
+  font-size: 15px;
+}
+
+div.position-body-content {
+  padding: 10px 0 10px 5px;
+  font-size: 15px;
+}
+
+.position-body-content div {
+  padding: 0 0 5px 0;
+}
+
+.position-body-content li {
+  color: #909090;
+}
+
+.position-body-content a {
+  text-decoration: none;
+}
+
+.position-body-content a:hover {
+    text-decoration: underline;
+  }

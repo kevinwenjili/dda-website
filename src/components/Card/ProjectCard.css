@@ -63,6 +63,7 @@ p.card-text-location {
 }
 
 .card-container {
+  background-color: #ffffff;
   padding: 15px;
   display: grid;
   grid-template-columns:

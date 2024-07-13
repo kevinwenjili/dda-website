@@ -29,7 +29,9 @@
 }
 
 .alt-banner .banner-bg-transparent li a:hover,
-.alt-banner .banner-bg-transparent .menu-btn:hover {
+.alt-banner .banner-bg-transparent .menu-btn:hover,
+.alt-banner .banner-transition-transparent li a:hover,
+.alt-banner .banner-transition-transparent .menu-btn:hover {
   color: #ffffff;
   background-color: #003366;
 }
@@ -40,7 +42,9 @@
 }
 
 .alt-banner .banner-bg-dark li a:hover,
-.alt-banner .banner-bg-dark .menu-btn:hover {
+.alt-banner .banner-bg-dark .menu-btn:hover,
+.alt-banner .banner-transition-dark li a:hover,
+.alt-banner .banner-transition-dark .menu-btn:hover  {
   color: #000000;
   background-color: #ffffff;
 }

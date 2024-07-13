@@ -29,13 +29,17 @@
 }
 
 .std-banner .banner-bg-transparent li a:hover,
-.std-banner .banner-bg-transparent .menu-btn:hover {
+.std-banner .banner-bg-transparent .menu-btn:hover,
+.std-banner .banner-transition-transparent li a:hover,
+.std-banner .banner-transition-transparent .menu-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
 .std-banner .banner-bg-dark li a:hover,
-.std-banner .banner-bg-dark .menu-btn:hover {
+.std-banner .banner-bg-dark .menu-btn:hover,
+.std-banner .banner-transition-dark li a:hover,
+.std-banner .banner-transition-dark .menu-btn:hover {
   color: #000000;
   background-color: #ffffff;
 }

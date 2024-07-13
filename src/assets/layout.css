@@ -3,12 +3,14 @@
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
+  z-index: 1;
 }
 
 html {
   display: table;
   margin: auto;
   width: 100vw;
+  min-width: 380px;
   background-color: #ffffff !important;
 }
 
@@ -17,7 +19,7 @@ body {
   vertical-align: middle;
   /* max-width: 1024px; */
   background-color: transparent !important;
-  min-width: 320px;
+  min-width: 380px;
 }
 
 div.page-container {
@@ -39,15 +41,19 @@ div.page-container {
 
 /* Spacers */
 .navbar-spacer {
-  padding: 40px;
+  height: 91px;
+}
+
+.bottom-spacer {
+  z-index: -100;
+  height: 0px;
+  margin-bottom: 150px;
 }
 
 /* Page Titles */
 .page-title {
-  padding: 20px var(--banner-clearance) 0px calc(var(--banner-clearance) - 3px);
+  padding: 20px var(--banner-clearance) 0px calc(var(--banner-clearance));
   font-size: 36px;
   font-weight: 400;
   width: 100vw;
 }
-
-

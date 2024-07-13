@@ -1,3 +1,21 @@
-.about-p {
-    margin: 0 var(--banner-clearance) 0 var(--banner-clearance)
+.about-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #ffffff;
+
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+}
+
+.about-div {
+  margin: var(--banner-clearance);
+}
+
+@media (max-width: 1000px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
 }

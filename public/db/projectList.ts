@@ -1,8 +1,7 @@
 const projectLists = [
-
   {
-    img: "db/images/eastern-ave-fatigue-evaluation.jpg",
-    refLink: "#",
+    img: "db/images/projects/eastern-ave-fatigue-evaluation.jpg",
+    refLink: "#projects",
     projectTitle: "Eastern Avenue Interchange Fatigue Evaluation",
     city: "Toronto",
     province: "Ontario",
@@ -10,8 +9,8 @@ const projectLists = [
     projectType: "evaluation",
   },
   {
-    img: "db/images/ship-channel-rehabilitation.jpg",
-    refLink: "#",
+    img: "db/images/projects/ship-channel-rehabilitation.jpg",
+    refLink: "#projects",
     projectTitle: "Cherry Street Bascule Bridge Rehabilitation - Phase I",
     city: "Toronto",
     province: "Ontario",
@@ -19,8 +18,8 @@ const projectLists = [
     projectType: "specialty",
   },
   {
-    img: "db/images/dvp-coating-rehabilitation.jpg",
-    refLink: "#",
+    img: "db/images/projects/dvp-coating-rehabilitation.jpg",
+    refLink: "#projects",
     projectTitle: "Don Valley Parkway Steel Bridges Coating Rehabilitation",
     city: "Toronto",
     province: "Ontario",
@@ -28,8 +27,8 @@ const projectLists = [
     projectType: "design",
   },
   {
-    img: "db/images/third-street-bridge-replacement.jpg",
-    refLink: "#",
+    img: "db/images/projects/third-street-bridge-replacement.jpg",
+    refLink: "#projects",
     projectTitle: "Third Street Bridge Rehabilitation",
     city: "Chatham-Kent",
     province: "Ontario",
@@ -37,8 +36,8 @@ const projectLists = [
     projectType: "design",
   },
   {
-    img: "db/images/various-culvert-rehabilitation.jpg",
-    refLink: "#",
+    img: "db/images/projects/various-culvert-rehabilitation.jpg",
+    refLink: "#projects",
     projectTitle: "City of Toronto Culverts Rehabilitation and Replacement",
     city: "Toronto",
     province: "Ontario",
@@ -46,8 +45,8 @@ const projectLists = [
     projectType: "design",
   },
   {
-    img: "db/images/osim-inspection.jpg",
-    refLink: "#",
+    img: "db/images/projects/osim-inspection.jpg",
+    refLink: "#projects",
     projectTitle: "City of Toronto Biennial OSIM Inspection Program",
     city: "Toronto",
     province: "Ontario",
@@ -55,8 +54,8 @@ const projectLists = [
     projectType: "inspection",
   },
   {
-    img: "db/images/fgge-hammer-sounding.jpg",
-    refLink: "#",
+    img: "db/images/projects/fgge-hammer-sounding.jpg",
+    refLink: "#projects",
     projectTitle: "Gardiner Expressway Soffit and Substructure Delamination Inspection",
     city: "Toronto",
     province: "Ontario",
@@ -64,8 +63,8 @@ const projectLists = [
     projectType: "inspection",
   },
   {
-    img: "db/images/nwr-underwater-inspection.jpg",
-    refLink: "#",
+    img: "db/images/projects/nwr-underwater-inspection.jpg",
+    refLink: "#projects",
     projectTitle: "MTO Northwest Region Bridges and Culverts Underwater Inspection",
     city: "",
     province: "North-Western Ontario",

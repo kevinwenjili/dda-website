@@ -1,12 +1,8 @@
 # A new website for DDA?
 
-#### Video Demo: https://www.youtube.com/watch?v=ZXXkk9zq1yw
-
-#### Description: This is a proposed website I developed for the engineering consulting company I currently work at.
-
 ## About
 
-My CS50 Final Project is a light-weight static website developed to showcase and promote an engineering consultanting firm. To allow deployment to GitHub Pages, this website does not have any backend features to render and display components. However, React.js was employed to allow for dynamic display of static content based on user interactivity.
+This is a light-weight static website developed to showcase and promote an engineering consultanting firm. To allow deployment to GitHub Pages, this website does not have any backend features to render and display components. However, React.js was employed to allow for dynamic display of static content based on user interactivity.
 
 In total, the website has 5 "pages". My intention with this Final Project is to utilize different Bootstrap components in each "page" of the website.
 

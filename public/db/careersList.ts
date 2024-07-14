@@ -75,16 +75,16 @@ const careersList = [
       "Experienced in bridge rehabilitation techniques and methodologies currently used in the local market",
     ],
   },
-  {
-    title: "Bridge Designer - Coop",
-    category: "Designer",
-    type: "Internship",
-    location: "Brampton, Ontario",
-    description: "",
-    descriptionList: ["Loading..."],
-    qualification: "",
-    qualificationList: ["Loading..."],
-  },
+  // {
+  //   title: "Bridge Designer - Coop",
+  //   category: "Designer",
+  //   type: "Internship",
+  //   location: "Brampton, Ontario",
+  //   description: "",
+  //   descriptionList: ["Loading..."],
+  //   qualification: "",
+  //   qualificationList: ["Loading..."],
+  // },
 ];
 
 export default careersList;

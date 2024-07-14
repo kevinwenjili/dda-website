@@ -94,14 +94,14 @@ function Projects() {
       <title>Projects | DDA</title>
       <Banner bannerStyle="alt" />
       <div className="navbar-spacer">&nbsp;</div>
-      {/* <div className="page-container"> */}
-      <div className="page-title">Projects</div>
-      <Search query={query} handleInputChange={handleInputChange}>
-        Search
-      </Search>
-      <Filter handleChange={handleChange} />
-      <Project result={result} />
-      {/* </div> */}
+      <div className="page-container">
+        <div className="page-title">Projects</div>
+        <Search query={query} handleInputChange={handleInputChange}>
+          Search
+        </Search>
+        <Filter handleChange={handleChange} />
+        <Project result={result} />
+      </div>
       <div className="bottom-spacer">&nbsp;</div>
       <Footer />
     </>

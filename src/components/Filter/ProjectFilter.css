@@ -17,6 +17,7 @@
   display: inline-block;
   justify-content: left;
   line-height: 200%;
+  background-color: #ffffff;
 }
 
 .filter-label-container input {

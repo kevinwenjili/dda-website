@@ -14,7 +14,10 @@ function About() {
       <div className="page-title">About</div>
       <div className="about-container">
         <div className="about-div">
-          <img className="about-image" src="assets/template.jpg" />
+          <img
+            className="about-image"
+            src="assets/home-images/home_gallery_7.jpg"
+          />
         </div>
         <div className="about-div">
           <p className="about-p">

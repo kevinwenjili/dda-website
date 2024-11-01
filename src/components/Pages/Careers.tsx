@@ -25,8 +25,8 @@ interface PositionsProps {
 
 const positions = careersList;
 
-const Careers = ({positions}:PositionsProps) => {
-  const imageList: string[] = ["assets/home-images/home_gallery_3.jpg"];
+const Careers = ({ positions }: PositionsProps) => {
+  const imageList: string[] = ["assets/home-images/home_gallery_5.jpg"];
 
   return (
     <>
